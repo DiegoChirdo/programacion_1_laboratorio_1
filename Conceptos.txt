@@ -1,6 +1,6 @@
 toupper (upper): Pasa a mayúscula los caracteres.
 tolower (lower): Pasa a minúscula los caracteres.
-fflush(stdin): Limpia el búfer del teclado. 
+fflush(stdin):  Limpia el buffer de entrada de datos, sirve para cuando necesitas tomar muchos datos seguidos y se generan saltos de línea automáticos que se guardan en este buffer. 
 __________
 
  CONTADOR: Cuenta ocurrencias. 
