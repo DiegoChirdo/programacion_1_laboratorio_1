@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+char main()
 {
-    int hora;
+    char hora;
     printf("Ingrese una hora\n");
     scanf("%d",&hora);
     switch (hora)
@@ -32,7 +32,7 @@ int main()
         case 17:
         case 18:
         case 19:
-        printf("Es la tarde");
+        printf("Es la tarde xd");
         break;
         case 20:
         case 21:
