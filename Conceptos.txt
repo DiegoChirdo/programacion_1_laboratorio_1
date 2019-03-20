@@ -1,6 +1,6 @@
 toupper (upper): Pasa a mayúscula los caracteres.
 tolower (lower): Pasa a minúscula los caracteres.
-
+fflush(stdin): Limpia el búfer del teclado. 
 __________
 
  CONTADOR: Cuenta ocurrencias. 
