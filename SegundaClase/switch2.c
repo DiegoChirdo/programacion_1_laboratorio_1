@@ -5,6 +5,7 @@ char main()
 {
     char hora;
     printf("Ingrese una hora\n");
+    setbuf(NULL,stdin);
     scanf("%d",&hora);
     switch (hora)
     {
