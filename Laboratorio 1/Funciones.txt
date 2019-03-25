@@ -1,0 +1,29 @@
+FUNCIONES.
+
+¿qué realiza?
+¿qué retorna?
+¿qué recibe?
+____ 
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int suma (int op1, int op2)	|
+{				|
+int res;			|	CUERPO
+res = op1 + op2;		|	DESARROLLO
+return res;			|	DEFINICIÓN
+}				|
+
+int main ()
+{
+int n1, n2, result;
+printf("numero 1: ");
+scanf("%d", &n1);
+printf("número 2: ");
+scanf("%d",&n2);
+result = suma (n1,n2);  -------------------------> LLAMADA A LA FUNCIÓN
+printf("La suma es:  ""%d",result);
+return 0;
+}
