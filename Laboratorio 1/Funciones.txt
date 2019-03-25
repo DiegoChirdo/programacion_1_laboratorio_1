@@ -9,7 +9,7 @@ ____
 #include <stdio.h>
 #include <stdlib.h>
 
-int suma (int op1, int op2)	|
+int suma (int op1, int op2)	| ---> Definición o prototipo
 {				|
 int res;			|	CUERPO
 res = op1 + op2;		|	DESARROLLO
@@ -27,3 +27,14 @@ result = suma (n1,n2);  -------------------------> LLAMADA A LA FUNCIÓN
 printf("La suma es:  ""%d",result);
 return 0;
 }
+
+
+	________
+
+	dir    |     data
+n1 >>>> 0x100  |      3
+n2 >>>> 0x104  |      5
+result> 0x108  |      8      Después de la ejecución de suma y de int main, dir y data quedan libres de n1n2result.
+n1 >>>	0x112  |      3
+n2 >>>	0x116  |      5
+res >>  0x120  |      8
