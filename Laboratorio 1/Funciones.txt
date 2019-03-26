@@ -1,10 +1,16 @@
 FUNCIONES.
+__
+
+int nro;
+int *n;   ----> * = PUNTERO (En vez de guardar un número entero, va a direccionar un dato que se encuentra en la memoria)
+nro = 3;
+n = &nro; ----> & = Designa una dirección de memoria.
+__
 
 ¿qué realiza?
 ¿qué retorna?
 ¿qué recibe?
-____ 
-
+___ 
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,9 +33,7 @@ result = suma (n1,n2);  -------------------------> LLAMADA A LA FUNCIÓN
 printf("La suma es:  ""%d",result);
 return 0;
 }
-
-
-	________
+___
 
 	dir    |     data
 n1 >>>> 0x100  |      3
@@ -38,3 +42,9 @@ result> 0x108  |      8      Después de la ejecución de suma y de int main, dir 
 n1 >>>	0x112  |      3
 n2 >>>	0x116  |      5
 res >>  0x120  |      8
+
+___
+
+set = Setear un dato
+get = Rescatar ese dato
+
