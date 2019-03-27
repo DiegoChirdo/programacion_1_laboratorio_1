@@ -5,7 +5,7 @@ referencia con &
 * = puntero, guarda dirección de memoria (no la dirección en sí. sino el dato que conserva)
 
 
-siempre se respeta el orden, y que sea entero.
+siempre se respeta que sea entero.
 _____________
 
 mostrar (int x, int y);

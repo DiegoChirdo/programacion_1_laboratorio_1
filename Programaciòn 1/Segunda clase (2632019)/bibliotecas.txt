@@ -1,0 +1,16 @@
+
+stdio.h
+funciones.h
+
+funciones.c
+main.c
+
+#include<stdio.h>  --- las bibliotecas propias del lenguaje se escriben entre <>. 
+#include<stdlib.h>
+#include"funciones.h" --- si se pone entre comillas, se busca en el lugar propiamente dicho (mismo archivo main. como lo encuentra, lo va a encontrar)
+
+___
+
+donde está mi archivo main, está mib
+
+main
