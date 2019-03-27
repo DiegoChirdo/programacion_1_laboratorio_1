@@ -1,0 +1,62 @@
+PASAJE por valor = int x (x sin &, ni *)
+
+referencia con &  
+
+* = puntero, guarda dirección de memoria (no la dirección en sí. sino el dato que conserva)
+
+
+siempre se respeta el orden, y que sea entero.
+_____________
+
+mostrar (int x, int y);
+main
+	mostrar	 (x, y);
+		  
+
+	mostrar (int x, int y)
+{
+x=y;
+printf("%d %d", x ,y);
+_______________
+
+factorial:
+
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
+
+3!=3*2*1=6
+
+4!=4*3*2*1=24
+
+main
+	factorial(n);     /*      n = número entero   */ 
+
+		factorial
+		resp = n*factorial(n-1);
+		return resp;
+
+#include <stdio.h>
+
+int factorial(int);
+
+void main(void)
+{
+	int valor,result;
+	printf("\nIngrese numero:");
+	scanf("%d",&valor);
+	result=factorial(valor);
+	printf("\nEl factorial de %d es %d",valor,result);
+}
+int factorial(int n)
+{
+	int resp;
+	if(n==1)
+	return 1;
+	resp=n* factorial(n-1);
+	return (resp);
+}
+
