@@ -81,3 +81,10 @@ int main ()
 
     return 0;
 }
+
+________________
+
+CARGA ALEATORIA
+
+En la carga aleatoria se informa el índice, y se carga el dato.
+Pero, en vez de hacer un for (porque FOR me obliga de 0 elemnto hacia x elemento)

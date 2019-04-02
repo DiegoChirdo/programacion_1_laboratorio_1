@@ -1,0 +1,3 @@
+main.c
+func.c --> funciones matematicas hasta factorial
+func.h --> prototipos
