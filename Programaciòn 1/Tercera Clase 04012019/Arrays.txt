@@ -105,7 +105,7 @@ para ordenar ascendente-descendente
 3 7 8 2 6 A 2 3 6 7 8
 
 #define CANT 5
-
+int vec [CANT]={2,7,6,3,8}
 int vec[CANT],i,j,aux;
 
 for(i=0;i<CANT-1;i++)
