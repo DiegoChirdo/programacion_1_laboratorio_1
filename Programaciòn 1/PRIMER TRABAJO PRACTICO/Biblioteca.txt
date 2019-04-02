@@ -1,3 +1,6 @@
 main.c
 func.c --> funciones matematicas hasta factorial
 func.h --> prototipos
+
+Para el menú, hacer un switch con cada opción como case (un default con "Ésta opción no es válida")
+
