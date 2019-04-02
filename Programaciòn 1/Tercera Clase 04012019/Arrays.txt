@@ -1,1 +1,83 @@
-ARRAYS
+sin ARRAYS
+
+int dato; --> Puede almacenar una variable del tipo entero
+char letra; ---> Puede almacenar una variable de un solo caracter.
+
+int edad1, edad2, ..., edad50; ---> (tendría que tener 50 scanf, y 50 printf)
+
+con ARRAYS
+
+int edad [50]; ---> Una variable en la cual voy a poder guardar 50 enteros.
+
+    edad[0] ---> Índice (el primer elemento de un ARRAY siempre es 0)
+
+
+
+
+
+
+
+
+
+_________
+
+#include...
+#define CANT 50
+int main ()
+{
+	int datos[50];
+	int acumulador = 0, i;  //* int i = 0;
+	for (i=0; i<CANT; i++)
+	{
+		printf("Edad:\n");
+		scanf("%d",&datos[i]);
+        	acum=acum+datos[i];
+	}
+
+	for (    )
+	{
+		printf("%d", datos[i]);
+
+	return 0;
+}
+
+
+___
+
+ARRAYAS PARALELOS (De manera paralela se usa la misma cantidad de variables siguiendo determinado contexto)
+
+#include <stdio.h>
+#include <stdlib.h>
+#define CANT 5
+
+int main ()
+{
+
+	int legajo[5];
+	int nota1[5];
+	int nota2[5];
+	int nota3[5];
+    int promedio;
+    int acum = 0, i;
+
+    for(i=0; i<CANT;i++)
+    {
+        printf("Legajo:\n");
+        scanf("%d",&legajo[i]);
+        printf("Nota 1\n");
+        scanf("%d",&nota1[i]);
+        printf("Nota 2 \n");
+        scanf("%d",&nota2[i]);
+        printf("Nota 3\n");
+        scanf("%d",&nota3[i]);
+        acum = nota1[i]+nota2[i]+nota3[i];
+
+    }
+    if(i=5)
+    {
+        promedio=acum/i;
+        printf("El promedio es %d",promedio);
+    }
+
+    return 0;
+}
