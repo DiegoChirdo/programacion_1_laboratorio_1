@@ -88,3 +88,15 @@ CARGA ALEATORIA
 
 En la carga aleatoria se informa el índice, y se carga el dato.
 Pero, en vez de hacer un for (porque FOR me obliga de 0 elemnto hacia x elemento)
+con WHILE o DO WHILE.
+
+para calcular máximos y mínimos: 
+for (i=0;i<CANT;i++){
+	if (i==0 || datos[i]>max)
+	{
+		max=datos[i];
+	}
+	if (i==0 || datos[i]<min)
+	{
+		min=datos[i];
+	}
