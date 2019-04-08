@@ -62,3 +62,6 @@ sizeof = asegura que no me voy a exceder de cantidad de datos en la memoria
 stdin = standard de teclado/de ingreso (desde donde se trabaja todo)
 
  sizeof = operador binario. nos va a decir la cantidad de bites que ocupa el tipo de dato/variable en la memoria */
+strupr(nombre); = pasa todos los caracteres a mayùsucla
+strlwr(nombre); = pasa todos los caracteres a minuscula
+tolower, y toupper son para un solo caracter. str de string.
