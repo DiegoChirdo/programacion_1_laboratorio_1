@@ -1,0 +1,40 @@
+Cadenas de Caracteres
+(string)
+
+void	|	char letra;
+int	|	
+char	|		'd'
+float	|
+double	|	char nombre[41];   
+	|		
+	|		'\0'= finalizador de carácteres. finaliza el string
+	|
+	|		__________________
+	|	INCLUDE #string.h
+	|	char nombre[31];	
+	|	int nro = 5;
+	|	int nros[5] = {1,5,3,4,2};
+	|	char saludo[10];
+	|	---saludo = "hola";----- >>>> NO SE PUEDE HACER
+	|	strcpy(saludo,"hola"); (lo que està a la derecha del igual, lo asigna lo que està a la derecha de la coma)
+	|		var  asignación
+	|
+	|	printf("%s",saludo);  /* %s porque es una cadena de caracteres (string) */
+	|	puts("HOLA"); /* solo texto */
+	|	puts(saludo); /* es la variable */
+	|	printf("El saludo diciendo %s", saludo);
+	|	printf("El dijo Hola");
+	|
+	|	puts = printf 
+	|	
+	|	fflush(stdin);
+	|	scanf("%s",nombre); = Cuando es un vector no lleva "&". Porque es el primer elemento de la dimensión de memoria.
+	|   /*	nombre   =  $nombre[0]; (Ambos códigos conllevan el mismo resultado)  */
+	|
+	
+
+    char texto[31];			(Define la variable texto, con 31 caracteres (incluyendo el \0)
+    printf("\nIngrese nombre: ");	/* Escribe en la consola lo que está entre comillas */
+    scanf("%s", texto);			Nos permite ingresar algo, y se lo asigna a la variable texto
+    printf("\nNombre: %s ",texto);	Nos devuelve lo ingresado mediante un printf
+    return 0;
