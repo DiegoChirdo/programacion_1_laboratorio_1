@@ -38,3 +38,27 @@ double	|	char nombre[41];
     scanf("%s", texto);			Nos permite ingresar algo, y se lo asigna a la variable texto
     printf("\nNombre: %s ",texto);	Nos devuelve lo ingresado mediante un printf
     return 0;
+	_____________________________
+
+
+    char buffer[64];
+    int cantidad;
+
+    printf("Nombre: ");
+    //fgets(buffer, 62, stdin);
+    fgets(buffer,sizeof(buffer)-2,stdin);  /* se le resta -2 porque toma el finalizador y un digito mas, sino desborda el prgama */
+
+    cantidad = strlen(buffer);
+
+    buffer[cantidad-1] = '\0';
+
+    printf("%s", buffer);
+
+    return 0;
+
+
+fgets = variable - Cuando nosotros escribimos JUAN con fgets. toma los 4 caracteres varios de juan, nos coloca un caracter especial de fgets al final. y despues, agrega el \0. (función para trabajar con archivos)
+sizeof = asegura que no me voy a exceder de cantidad de datos en la memoria
+stdin = standard de teclado/de ingreso (desde donde se trabaja todo)
+
+ sizeof = operador binario. nos va a decir la cantidad de bites que ocupa el tipo de dato/variable en la memoria */

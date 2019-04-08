@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1536624956 source:c:\users\alumno\desktop\hoy\fgets\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1554764252 source:c:\users\alumno\desktop\hoy\programacion_1_laboratorio_1\programaciòn 1\quinta clase\fgets\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
