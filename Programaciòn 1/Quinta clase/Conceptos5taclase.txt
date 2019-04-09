@@ -65,3 +65,4 @@ stdin = standard de teclado/de ingreso (desde donde se trabaja todo)
 strupr(nombre); = pasa todos los caracteres a mayùsucla
 strlwr(nombre); = pasa todos los caracteres a minuscula
 tolower, y toupper son para un solo caracter. str de string.
+strcat(cad 1, cad2) = concatena, une el final de cad1 con el principio de cad2) ej.: strcat(apellidonombre, apellido);
