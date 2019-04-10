@@ -61,7 +61,8 @@ scanf("%d",&opcion);
 switch(opcion){
 case 1:
 	alta(legajo, apellido, nombre, ...);
-
+case 2:
+baja (legajo, entrada, CANT);
 
 
 
@@ -74,5 +75,24 @@ printf("%s", opciones);
 scanf("%d",&opcion);
 return opcion;
 }
+
+
+void baja (int legajo[], int entrada [], int cantidad)
+{
+char rta;
+int legajoaux, i , flag=0;
+printf("Legajo a buscar: ");
+scanf("&d",$legajoaux);
+for(i=0;i<cantidad,i++)
+{
+if(legajo[i]==legajoaux)
+{
+printf("LEgajo encontrado: %d", legajo[i]);
+printf("dar de baja? (s/n)");
+fflush(stdin);
+scanf("%c",&rta);
+
+
+
 
 [] = vacio, significa que esta recibiendo un array
