@@ -1,0 +1,17 @@
+
+
+
+char nombres [10][31]
+char apellidos [10][31]
+		F   C
+		I   O
+		L   L
+		A   U
+		S   M
+		    N
+		    A
+		    S
+
+
+INDICEs = FILAS
+

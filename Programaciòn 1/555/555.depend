@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1554848475 source:c:\users\alumno\desktop\nueva carpeta\555\666.c
+
+1554849435 source:c:\users\alumno\desktop\nueva carpeta\555\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1554849435 source:c:\users\alumno\desktop\nueva carpeta\hoy\555\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1554850370 source:c:\users\alumno\desktop\nueva carpeta\hoy\555\ejemplo2666.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
