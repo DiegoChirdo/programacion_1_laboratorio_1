@@ -91,7 +91,12 @@ printf("LEgajo encontrado: %d", legajo[i]);
 printf("dar de baja? (s/n)");
 fflush(stdin);
 scanf("%c",&rta);
-
+rta=toupper(rta);
+while(rta !='S' && rta!= 'N');
+if(rta=='s')
+{
+estado[i]=0;
+break;
 
 
 
