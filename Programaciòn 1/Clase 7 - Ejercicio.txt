@@ -4,6 +4,8 @@ for(i=0; i<CANT;i++)
 }
 
 para el alta:
+
+flag=0;
 printf
 scanf
 for(i=0;i<CANT;i++)
@@ -25,10 +27,20 @@ for(i=0;i<CANT;i++)
 {
 	if(estado[i]==legajoaux)
  	(
+	flag=1;
 	printf("%d %s %s %d",       )
 	printf("Modificar el registro? (S/N)");
-		
+	scanf(   )
+	if (var == S)
+	{
+	printf(se borro el registro)
+	else
+	{
+	printf(no se borro el registro)
+
 	}
 
 }		
+if flag == 0;
+printf(No existe)
 
