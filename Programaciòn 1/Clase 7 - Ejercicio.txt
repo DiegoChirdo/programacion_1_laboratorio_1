@@ -1,0 +1,34 @@
+for(i=0; i<CANT;i++)
+{
+	estado[i]=0;
+}
+
+para el alta:
+printf
+scanf
+for(i=0;i<CANT;i++)
+{
+	if(estado[i]==legajoaux)
+ 	(
+	
+	
+
+	estado[i]=0;
+	break;
+	}
+
+}		
+
+_____________--
+
+for(i=0;i<CANT;i++)
+{
+	if(estado[i]==legajoaux)
+ 	(
+	printf("%d %s %s %d",       )
+	printf("Modificar el registro? (S/N)");
+		
+	}
+
+}		
+
