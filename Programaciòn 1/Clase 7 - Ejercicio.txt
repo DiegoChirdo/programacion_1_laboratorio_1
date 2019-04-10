@@ -88,6 +88,7 @@ for(i=0;i<cantidad,i++)
 if(legajo[i]==legajoaux)
 {
 printf("LEgajo encontrado: %d", legajo[i]);
+flag=1;
 printf("dar de baja? (s/n)");
 fflush(stdin);
 scanf("%c",&rta);
@@ -97,6 +98,16 @@ if(rta=='s')
 {
 estado[i]=0;
 break;
+}
+else {
+printf("No se diò de baja");
+}
+} (cierro el for)
+
+if(flag==0)
+{
+printf("Legajo inexistente");
+}
 
 
 
