@@ -108,7 +108,17 @@ if(flag==0)
 {
 printf("Legajo inexistente");
 }
+}
 
+
+do{
+op=menu();
+switch(op){
+case 1:
+case2:
+case3:
+
+(SUB MENU PARA ELEGIR QUE DATO CAMBIAR)
 
 
 [] = vacio, significa que esta recibiendo un array
