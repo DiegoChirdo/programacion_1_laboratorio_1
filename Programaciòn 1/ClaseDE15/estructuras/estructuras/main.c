@@ -22,10 +22,9 @@ int main()
     printf("Ingrese edad: ");
     fflush(stdin);
     scanf("%d", &per.edad);
+    per.isEmpty = 0;
 
-    printf("Apellido: %s", per.apellido);
-    printf("\nNombre: %s", per.nombre);
-    printf("\nEdad: %d", per.edad);
+    printf("%s\t%s\t%d\t%d", per.apellido, per.nombre, per.edad, per.isEmpty);
 
     return 0;
 }
