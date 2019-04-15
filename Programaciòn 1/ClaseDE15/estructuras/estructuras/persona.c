@@ -17,3 +17,8 @@ ePersona alta(ePersona per)
 
     return per;
 }
+
+void mostrar(ePersona per)
+{
+    printf("%s\t%s\t%d\t%d\n", per.apellido, per.nombre, per.edad, per.isEmpty);
+}

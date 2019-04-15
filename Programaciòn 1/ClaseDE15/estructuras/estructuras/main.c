@@ -8,7 +8,7 @@ int main()
 
     per = alta(per);
 
-    printf("%s\t%s\t%d\t%d", per.apellido, per.nombre, per.edad, per.isEmpty);
+    mostrar(per);
 
     return 0;
 }

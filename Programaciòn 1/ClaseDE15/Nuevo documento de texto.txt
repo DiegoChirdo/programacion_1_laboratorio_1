@@ -1,7 +1,7 @@
 ESTRUCTURAS DE DATOS
 ________
 char	|
-int	|	struct persona	/* TIPO DE DATO */
+int	|	struct ePersona	/* TIPO DE DATO */
 float	|	{
 double	|		char apellido [31];
 void	|		char nombre [31];
@@ -11,7 +11,7 @@ ________|		int edad;
 	
 		int algo;	/* int = TIPO DE DATO */
 	
-		struct persona per;  /* struct persona = TIPO DE DATO */
+		struct ePersona per;  /* struct persona = TIPO DE DATO */
 		per.apellido
 		per.nombre
 		&per.edad	(SI ES UN ENTERO, Y HAY QUE HACERLE SCANF SE LE PONE UN "&")
@@ -27,7 +27,7 @@ ________________________________________________________
 			int edad;
 			int isEmpty;
 		}ePersona;
-
+		ePersona per;
 
 
 ________________________________________________________

@@ -8,3 +8,5 @@ typedef struct
     }ePersona;
 
 ePersona alta(ePersona per);
+
+void mostrar(ePersona per);
