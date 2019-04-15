@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct persona
-   {
-    char apellido[31];
-    char nombre[31];
-    int edad;
-    int isEmpty;
-    };
+#include  "persona.h"
 
 int main()
 {
