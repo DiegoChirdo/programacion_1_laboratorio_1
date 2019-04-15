@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include "persona.h"
 
-int main()
-{
+int main(){
     ePersona per;
 
     per = alta(per);
 
-    printf("%s\t%s\t%d\t%d", per.apellido, per.nombre, per.edad, per.isEmpty);
+    system("cls");
+
+    mostrar(per);
 
     return 0;
 }

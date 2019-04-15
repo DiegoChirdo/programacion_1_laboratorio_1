@@ -1,5 +1,15 @@
 # depslib dependency file v1.0
-1555368487 source:c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\clasede15\estructuras\estructuras\main.c
+1555371212 source:c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\clasede15\estructuras\estructuras\main.c
 	<stdio.h>
 	<stdlib.h>
+	"persona.h"
+
+1555371203 c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\clasede15\estructuras\estructuras\persona.h
+
+1555370195 c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\clasede15\estructuras\estructuras\persona.c
+
+1555370904 source:c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\clasede15\estructuras\estructuras\persona.c
+	<stdio.h>
+	<stdlib.h>
+	"persona.h"
 
