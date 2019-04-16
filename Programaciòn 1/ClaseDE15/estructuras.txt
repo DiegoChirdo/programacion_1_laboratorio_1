@@ -78,7 +78,19 @@ ________________________________________________________
 		}
 	}
 				
-					
+	typedef struct
+	{
+		int id;
+		char descripcion[31];
+	}eNacion;
+	
+	typedef struct
+	{
+		int idNacionalidad;        /* TIENE QUE IR EN LA ESTRUCTURA ePersona */ 
+	}ePersona; 
+							
+
+	eNacion nacionalidades[]={1,"Argentina",2,"Peru",3,"Uruguay"};
 ________________________________________________________
 		 ----------------------
 		|ARRAYAS DE ESTRUCTURAS|
