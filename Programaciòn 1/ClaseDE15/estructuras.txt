@@ -29,6 +29,31 @@ ________________________________________________________
 		}ePersona;
 		ePersona per;
 
+
+________________________________________________________
+
+
+typedef struct
+{
+	int dia;
+	int mes;
+	int anio;
+}eFecha;
+
+typedef struct
+{
+	char apellido[31];
+	char nombre[31];
+	eFecha fechaNac;
+}ePersona;
+
+ePersona per;
+per.apellido;
+per.nombre;
+per.fechaNac.dia;
+per.fechaNac.mes;
+per.fechaNac.año;
+	
 ________________________________________________________
 		 ----------------------
 		|ARRAYAS DE ESTRUCTURAS|
@@ -60,5 +85,6 @@ ________________________________________________________
 (dato) estado   
 							
 ________________________________________________________
+
 
 
