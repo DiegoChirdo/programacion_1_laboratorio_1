@@ -54,6 +54,31 @@ per.fechaNac.dia;
 per.fechaNac.mes;
 per.fechaNac.año;
 	
+
+________________________________________________________
+
+	void ordenar(ePersona pers[], int cantidad)
+	{
+		int i,j;
+		ePersona aux;
+		for(i=0;i<cantidad-1;i++)
+		{
+			for(j=i+1,i<cantidad,i++)
+			{
+				if(strcmp(pers[i].apellido,pers[i].apellido)>0)
+				{
+			     		/* strcpy(aux, pers[i].apellido); */
+					/* strcpy(pers[i].apellido, pers[i].apellido); */
+					/* strcpy(pers[i].apellido, aux); */
+					aux=pers[i];
+					pers[i]=pers[j];
+					pers[j]=aux;
+				}
+			}
+		}
+	}
+				
+					
 ________________________________________________________
 		 ----------------------
 		|ARRAYAS DE ESTRUCTURAS|
