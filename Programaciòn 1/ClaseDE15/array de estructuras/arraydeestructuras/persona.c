@@ -2,30 +2,33 @@
 #include <stdlib.h>
 #include "persona.h"
 
-void alta( ePersona pers[], int cantidad ){
+void alta( ePersona per[], int cantidad )
+{
     int i;
 
-    for( i = 0; i < cantidad; i++ ){
-        printf("Apellido:\n");
-        fflush(stdin);
-        scanf("%s", pers[i].apellido);
+    for( i = 0; i < cantidad; i++ )
+        {
+            printf("Apellido:\n");
+            fflush(stdin);
+            scanf("%s", per[i].apellido);
 
-        printf("Nombre:\n");
-        fflush(stdin);
-        scanf("%s", pers[i].nombre);
+            printf("Nombre:\n");
+            fflush(stdin);
+            scanf("%s", per[i].nombre);
 
-        printf("Edad:\n");
-        scanf("%d", &pers[i].edad);
+            printf("Edad:\n");
+            scanf("%d", &per[i].edad);
 
-        pers[i].isEmpty = 0;
-    }
+            per[i].isEmpty = 0;
+        }
 }
 
-void mostrar( ePersona pers[], int cantidad ){
+void mostrar( ePersona per[], int cantidad )
+{
     int i;
-
-    for( i = 0; i < cantidad; i++ ){
-        printf("%s\t%s\t%d\t%d\n", pers[i].apellido, pers[i].nombre, pers[i].edad, pers[i].isEmpty);
+    for( i = 0; i < cantidad; i++ )
+    {
+        printf("%s\t%s\t%d\t%d\n", per[i].apellido, per[i].nombre, per[i].edad, per[i].isEmpty);
     }
 
 }

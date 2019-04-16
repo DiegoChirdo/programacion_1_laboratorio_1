@@ -4,14 +4,15 @@
 
 #define CANT 3
 
-int main(){
-    ePersona pers[CANT];
+int main()
+{
+    ePersona per[CANT];
 
-    alta(pers, CANT);
+    alta(per, CANT);
 
     system("cls");
 
-    mostrar(pers, CANT);
+    mostrar(per, CANT);
 
     return 0;
 }
