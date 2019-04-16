@@ -1,4 +1,3 @@
-
 typedef struct
     {
     char apellido[31];
