@@ -93,17 +93,18 @@ ________________________________________________________
 	eNacion nacionalidades[]={1,"Argentina",2,"Peru",3,"Uruguay"};
 
 int buscarPorDni(ePersona pers[], int cantidad, int dniaux)
-int retorno = 0;
+{
+int retorno = -1;
 for(  )
 {
 	if()
 	{
-		retorno=1;
+		retorno=i;
 		break;
 	)
 }
 return retorno;
-
+}
 ________________________________________________________
 		 ----------------------
 		|ARRAYAS DE ESTRUCTURAS|
