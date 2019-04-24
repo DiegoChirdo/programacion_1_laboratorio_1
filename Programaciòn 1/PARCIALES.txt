@@ -4,6 +4,15 @@ PARCIAL LABORATRIO.
 
 06/5 LUNES
 
+(
+INCLUIR
+main.c
+empleado.c
+empleado.h
+input.c
+input.h
+)
+
 
 PARCIALES PROGRAMACIÓN
 

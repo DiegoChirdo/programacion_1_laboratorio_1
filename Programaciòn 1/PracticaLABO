@@ -1,0 +1,22 @@
+main.c
+empleado.c
+empleado.h
+input.c
+input.h
+
+
+
+
+eSector sectores[]={1,"RRHH",2,"Compras",3,"Ventas"};
+eMenu menues[]={
+
+eAlmuerzo:
+id;			
+menuId;			
+empleadoLegajo;		
+fecha			
+
+
+
+isEmpty = 1(para dar de alta al empleado)
+
