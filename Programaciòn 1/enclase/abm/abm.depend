@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1556574973 source:c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\enclase\abm\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
+1556577513 source:c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\enclase\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"utn.h"
+
+1556577644 c:\users\alumno\desktop\nueva carpeta\programacion_1_laboratorio_1\programaciòn 1\enclase\abm\utn.h
+
