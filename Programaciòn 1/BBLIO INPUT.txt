@@ -1,0 +1,30 @@
+int getValidFloat(char Message[], char errorMessage[], float* pResult, float lowLimit, float hiLimit,int reintentos)
+{
+    char auxStr[256];
+    int i, retorno = 0;
+    float auxInt;
+
+    for(i=0 ; i<reintentos ; i++)
+    {
+        if (!getStringNumerosFlotantes(requestMessage,auxStr))
+        {
+            printf ("%s",errorMessage);
+            break;
+            continue;
+
+        }
+        auxInt = atof(auxStr);
+        if(auxInt < lowLimit || auxInt > hiLimit)
+        {
+            printf ("%s",errorMessage);
+            continue;
+
+        }
+        *pResult = auxInt;
+        retorno = 1;
+        break;
+
+    }
+    return 1;
+
+}
