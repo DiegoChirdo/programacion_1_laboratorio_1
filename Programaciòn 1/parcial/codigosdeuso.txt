@@ -1,0 +1,21 @@
+int menu()
+{
+    int opcion;
+
+    system("cls");
+    printf("  *** ABM Empleados ***\n\n");
+    printf("1- Alta Empleado\n");
+    printf("2- Baja Empleado\n");
+    printf("3- Modificacion Empleado\n");
+    printf("4- Ordenar Empleados\n");
+    printf("5- Listar Empleados\n");
+    printf("6- Listar Sectores con Empleados\n");
+    printf("7- Cantidad de empleados por sector\n");
+    printf("8- Sectores con mas empleados\n");
+    printf("9- Salir\n\n");
+    printf("Ingrese opcion: ");
+    scanf("%d", &opcion);
+
+    return opcion;
+}
+
