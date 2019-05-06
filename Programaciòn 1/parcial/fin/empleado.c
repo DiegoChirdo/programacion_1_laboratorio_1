@@ -63,10 +63,10 @@ int empleado_BuscarLibre(Empleado *arrayEmpleados,int tamArray, int *posicionLib
     }
     return ret;
 }
-int empleado_Alta(Empleado arrayEmpleados[],int tamArray, int id)
+int socio_Alta(Socios arraySocios[],int tamArray, int id)
 {
     int ret=-1;
-    Empleado empleadoNuevo;
+    Socios socioNuevo;
     int posicionLibre;
     if ((arrayEmpleados!=NULL) && (tamArray>=0))
     {
