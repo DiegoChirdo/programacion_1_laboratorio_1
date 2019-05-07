@@ -21,6 +21,7 @@ typedef struct
     int codigo;
     char apellido[51];
     char nombre[51];
+    int isEmpty;
 }Autor;
 
 typedef struct
@@ -28,6 +29,7 @@ typedef struct
     int codigo;
     char titulo[51];
     Autor codigoAutor;
+    int isEmpty;
 }Libros;
 
 typedef struct
@@ -75,20 +77,20 @@ int main()
 
     Autor autores[AUTORES]=
     {
-        {1000,"Perez","Marcos"},
-        {1001,"Gimenez","Pablo"},
-        {1002,"Cortazar","Julio"},
-        {1003,"Miguel","Roberto"},
-        {1004,"Neira","Enrique"},
-        {1005,"Perez","Marcos"},
+        {1000,"Perez","Marcos",1},
+        {1001,"Gimenez","Pablo",1},
+        {1002,"Cortazar","Julio",1},
+        {1003,"Miguel","Roberto",1},
+        {1004,"Neira","Enrique",1},
+        {1005,"Perez","Marcos",1},
     };
 
     Libros libritos[LIBROS]=
     {
-        {2000,"El hombre araña",{1000}},
-        {2001,"Titanic",{1001}},
-        {2002,"Interstellar",{1002}},
-        {2003,"Titanic",{1003}},
+        {2000,"El hombre araña",{1000},1},
+        {2001,"Titanic",{1001},1},
+        {2002,"Interstellar",{1002},1},
+        {2003,"Titanic",{1003},1},
     };
 
 
@@ -195,18 +197,18 @@ int main()
                 printf("EL CODIGO NO EXISTE.\n");
                 break;
             }
-            arraySocios[indiceResultadoBusqueda].codigo=-1;
+            arraySocios[indiceResultadoBusqueda].isEmpty=0;
             break;
         case 'd':
             for(i=0;i<SOCIOS-1;i++)
             {
-                if(arraySocios[i].codigo==-1)
+                if(arraySocios[i].isEmpty==0)
                 {
                     continue;
                 }
                 for(j=i+1;j<SOCIOS;j++)
                 {
-                    if(arraySocios[j].codigo==-1)
+                    if(arraySocios[j].isEmpty==0)
                     {
                         continue;
                     }
@@ -221,7 +223,7 @@ int main()
             printf("LISTADO: \n\n");
             for(i=0;i<SOCIOS;i++)
             {
-                if(arraySocios[i].codigo!=-1)
+                if(arraySocios[i].isEmpty!=0)
                 {
                     printf("CODIGO  -  APELLIDO   -  NOMBRE  -  SEXO  -  TELEFONO  -  EMAIL");
                     printf("%d -  %s  - %s  -  %s  -  %s  -  %s\n",arraySocios[i].codigo, arraySocios[i].apellido, arraySocios[i].nombre, arraySocios[i].sexo, arraySocios[i].telefono, arraySocios[i].email);
@@ -229,7 +231,17 @@ int main()
             }
             break;
         case 'e':
-
+            printf("LISTADO DE LIBROS: \n");
+            for(i=0;i<LIBROS;i++)
+            {
+                if(libritos[i].isEmpty!=0)
+                {
+                    printf("CODIGO  -  LIBRO  -  COD. AUTOR \n");
+                    printf("%d  -  %s  -  %s  \n",libritos[i].codigo,libritos[i].titulo,libritos[i].codigoAutor);
+                }
+            }
+            break;
+        case 'f':
 
     }
 
