@@ -242,7 +242,16 @@ int main()
             }
             break;
         case 'f':
+            printf("LISTADO DE AUTORES: \n");
+            for(i=0;i<AUTORES;i++)
+            {
+                if(libritos[i].isEmpty!=0)
+                {
+                    printf("CODIGO  -  NOMBRE  -  APELLIDO\n");
+                    printf("%d  -  %s  -  %s  \n",autores[i].codigo,autores[i].nombre,autores[i].apellido);
+                }
 
+            }
     }
 
 }
