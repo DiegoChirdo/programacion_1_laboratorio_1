@@ -61,6 +61,7 @@ int main()
     char auxiliarNumero[16];
     char auxiliarEmail[31];
     char textoCodigo[50];
+    char auxiliarSocios[50];
     int auxiliarCodigo;
     int auxiliarDia;
     int auxiliarMes;
@@ -183,12 +184,51 @@ int main()
             }
         case 'c':
             printf("BAJA\n\n");
-
-
-
-
-
-        }
+            if(!getStringNumeros("INGRESE EL CODIGO DE SOCIO: \n", textoCodigo))
+            {
+                printf("EL CODIGO DE SOCIO SOLO PUEDE TENER NUMEROS. \n");
+                break;
+            }
+            indiceResultadoBusqueda=buscarPrimerOcurrencia(arraySocios[SOCIOS],SOCIOS,atoi(textoCodigo));
+            if(indiceResultadoBusqueda==-1)
+            {
+                printf("EL CODIGO NO EXISTE.\n");
+                break;
+            }
+            arraySocios[indiceResultadoBusqueda].codigo=-1;
+            break;
+        case 'd':
+            for(i=0;i<SOCIOS-1;i++)
+            {
+                if(arraySocios[i].codigo==-1)
+                {
+                    continue;
+                }
+                for(j=i+1;j<SOCIOS;j++)
+                {
+                    if(arraySocios[j].codigo==-1)
+                    {
+                        continue;
+                    }
+                    if(strcmp(arraySocios[i].apellido,arraySocios[j].apellido)>0)
+                    {
+                        auxiliarSocios=arraySocios[j];
+                        arraySocios[j]=arraySocios[i];
+                        arraySocios[i]=auxiliarSocios;
+                    }
+                }
+            }
+            printf("LISTADO: \n\n");
+            for(i=0;i<SOCIOS;i++)
+            {
+                if(arraySocios[i].codigo!=-1)
+                {
+                    printf("CODIGO  -  APELLIDO   -  NOMBRE  -  SEXO  -  TELEFONO  -  EMAIL");
+                    printf("%d -  %s  - %s  -  %s  -  %s  -  %s\n",arraySocios[i].codigo, arraySocios[i].apellido, arraySocios[i].nombre, arraySocios[i].sexo, arraySocios[i].telefono, arraySocios[i].email);
+                }
+            }
+            break;
+        case 'e':
 
 
     }
