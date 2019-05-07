@@ -8,7 +8,6 @@
 #include "input.h"
 #include "socios.h"
 
-int buscarPrimerOcurrencia(Socios arraySocios[],int cantidadDeElementos,int valor);
 
 
 

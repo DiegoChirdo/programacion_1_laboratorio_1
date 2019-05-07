@@ -63,13 +63,13 @@ int main()
     char auxiliarNumero[16];
     char auxiliarEmail[31];
     char textoCodigo[50];
-    char auxiliarSocios[50];
+    Socios auxiliarSocios;
     int auxiliarCodigo;
     int auxiliarDia;
     int auxiliarMes;
     int auxiliarAnio;
     char opcion;
-    int opcion2;
+    int opcionseg;
     int indiceLugarLibre;
     int indiceResultadoBusqueda;
     int i,j;
@@ -135,7 +135,7 @@ int main()
             break;
         case 'b':
             printf("MODIFICAR: \n");
-            if!(getStringNumeros("INGRESE EL CODIGO DE SOCIO: \n",textoCodigo))
+            if(!getStringNumeros("INGRESE EL CODIGO DE SOCIO: \n",textoCodigo))
             {
                 printf("EL CODIGO DE SOCIO SOLO PUEDEN SER NUMEROS. \n");
                 break;
@@ -146,10 +146,10 @@ int main()
                 printf("EL CODIGO NO EXISTE!!\n");
                 break;
             }
-            while(opcion2!=6)
+            while(opcionseg!=6)
             {
-                opcion2=getInt("MODIFICAR:\n1) NOMBRE\n2) APELLIDO\n 3)SEXO\n 4) TELEFONO\n 5) eMAIL\n");
-                switch(opcion2)
+                opcionseg=getInt("MODIFICAR:\n1) NOMBRE\n2) APELLIDO\n 3)SEXO\n 4) TELEFONO\n 5) eMAIL\n");
+                switch(opcionseg)
                 {
                 case 1:
                     if(!getStringLetras("INGRESE UN NOMBRE: \n",auxiliarNombre))
@@ -234,10 +234,10 @@ int main()
             printf("LISTADO DE LIBROS: \n");
             for(i=0;i<LIBROS;i++)
             {
-                if(libritos[i].isEmpty!=0)
+                if(libritos[i].isEmpty==1)
                 {
                     printf("CODIGO  -  LIBRO  -  COD. AUTOR \n");
-                    printf("%d  -  %s  -  %s  \n",libritos[i].codigo,libritos[i].titulo,libritos[i].codigoAutor);
+                    printf("%d  -  %s  -  %d  \n",libritos[i].codigo,libritos[i].titulo,libritos[i].codigoAutor);
                 }
             }
             break;
@@ -245,17 +245,17 @@ int main()
             printf("LISTADO DE AUTORES: \n");
             for(i=0;i<AUTORES;i++)
             {
-                if(libritos[i].isEmpty!=0)
+                if(libritos[i].isEmpty==1)
                 {
                     printf("CODIGO  -  NOMBRE  -  APELLIDO\n");
                     printf("%d  -  %s  -  %s  \n",autores[i].codigo,autores[i].nombre,autores[i].apellido);
                 }
 
             }
+        }
+
     }
-
 }
-
 
 int buscarPrimerOcurrencia(Socios arrayPersonas[],int cantidadDeElementos,int valor)
 {

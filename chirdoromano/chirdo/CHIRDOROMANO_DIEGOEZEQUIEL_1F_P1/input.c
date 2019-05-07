@@ -140,3 +140,43 @@ int getStringTelefono(char mensaje[],char input[])
     }
     return 0;
 }
+
+
+int buscarPrimerOcurrencia(Socios arrayPersonas[],int cantidadDeElementos,int valor)
+{
+    int i;
+    for(i=0;i < cantidadDeElementos; i++)
+    {
+        if(arrayPersonas[i].codigo == valor)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void inicializarSocios(Socios vec[], int tam)
+{
+
+    for(int i=0; i < tam; i++)
+    {
+        vec[i].isEmpty = 0;
+    }
+
+}
+
+int buscarLibre(Socios vec[], int tam)
+{
+
+    int indice = -1;
+
+    for(int i=0; i < tam; i++)
+    {
+        if(vec[i].isEmpty == 0)
+        {
+            indice = i;
+            break;
+        }
+    }
+    return indice;
+}

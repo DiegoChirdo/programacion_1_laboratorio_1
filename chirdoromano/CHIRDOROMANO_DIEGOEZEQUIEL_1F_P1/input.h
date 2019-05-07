@@ -5,14 +5,18 @@
 #include <string.h>
 #include <ctype.h>
 #include <conio.h>
-#include "input.h"
 #include "socios.h"
-
+#include "input.h"
 char getChar (char mensaje[]);
 int getStringLetras(char mensaje[],char input[]);
-int getStringTelefono(char mensaje[],char input[]);
+int getStringNumeros(char mensaje[],char input[]);
 char pedirSexo(void);
+int getStringTelefono(char mensaje[],char input[]);
 void getString(char mensaje[],char input[]);
+int esSoloLetras(char str[]);
+int esNumerico(char str[]);
+int esTelefono(char str[]);
+
 
 
 
