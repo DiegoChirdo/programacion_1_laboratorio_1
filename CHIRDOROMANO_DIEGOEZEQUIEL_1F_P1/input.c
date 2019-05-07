@@ -128,3 +128,15 @@ char pedirSexo(void)
     }
     return sexo;
 }
+
+int getStringTelefono(char mensaje[],char input[])
+{
+    char aux[256];
+    getString(mensaje,aux);
+    if(esTelefono(aux))
+    {
+        strcpy(input,aux);
+        return 1;
+    }
+    return 0;
+}

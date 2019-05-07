@@ -1,11 +1,15 @@
-void inicializarAlmuerzos(Empleado vec[], int tam)
+int buscarPrimerOcurrencia(Socios arrayPersonas[],int cantidadDeElementos,int valor)
 {
-    for(int i=0; i < tam; i++)
+    int i;
+    for(i=0;i < cantidadDeElementos; i++)
     {
-        vec[i].isEmpty = 0;
+        if(arrayPersonas[i].codigo == valor)
+        {
+            return i;
+        }
     }
+    return -1;
 }
-
 
 void inicializarSocios(Socios vec[], int tam)
 {
@@ -89,25 +93,5 @@ void altaSocio(Socio vec[], int tam, Sector sectores[], int tamSector)
             printf("Alta empleado exitosa!!!\n\n");
 
         }
-    }
-}
-
-
-
-void altaIncremental(Empleado vec[],int tam, Sector sectores[], int tamSector)
-{
-    int indice;
-    int legajo;
-    int esta;
-
-    indice = buscarLibre(empleado,EMPLEADOS);
-    if(indice == -1)
-    {
-        printf("NO HAY MAS LUGAR.\n");
-        break;
-    }
-    for(i=0;i<EMPLEADOS;i++)
-    {
-
     }
 }

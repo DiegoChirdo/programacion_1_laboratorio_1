@@ -9,6 +9,10 @@
 #include "socios.h"
 
 char getChar (char mensaje[]);
+int getStringLetras(char mensaje[],char input[]);
+int getStringTelefono(char mensaje[],char input[]);
+char pedirSexo(void);
+void getString(char mensaje[],char input[]);
 
 
 

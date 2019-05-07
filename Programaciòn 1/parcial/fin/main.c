@@ -119,7 +119,7 @@ int main()
     Empleado arrayEmpleados[10];
     empleado_InicializarArray(arrayEmpleados,10);
     do{
-        empleado_Alta(arrayEmpleados,10,id);
+        socio_Alta(arrayEmpleados,10,id);
         empleado_MostrarArray(arrayEmpleados,10);
 
         printf("\nDesea seguir ingresando?: 0/1 ");
