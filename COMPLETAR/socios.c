@@ -307,12 +307,33 @@ int altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
     printf("Ingrese un dia: \n");
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.dia);
+    if(!vec[indexLibre].fechaPrestamo.dia>0 || !vec[indexLibre].fechaPrestamo.dia<32)
+    {
+        printf("ERROR, INGRESE CORRECTAMENTE.\n");
+        system("pause");
+        system("cls");
+        return 0;
+    }
     printf("Ingrese un mes: \n");
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.mes);
+    if(!vec[indexLibre].fechaPrestamo.mes>0 || !vec[indexLibre].fechaPrestamo.mes<13)
+    {
+        printf("ERROR, INGRESE CORRECTAMENTE.\n");
+        system("pause");
+        system("cls");
+        return 0;
+    }
     printf("Ingrese un anio: \n");
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.anio);
+    if(!vec[indexLibre].fechaPrestamo.anio>1990 || !vec[indexLibre].fechaPrestamo.anio<2020)
+    {
+        printf("ERROR, INGRESE CORRECTAMENTE.\n");
+        system("pause");
+        system("cls");
+        return 0;
+    }
     vec[indexLibre].codigo=codigo;
     vec[indexLibre].codigoLibro.codigo=busquedaLibro;
     vec[indexLibre].codigoSocio.codigo=busquedaSocio;
