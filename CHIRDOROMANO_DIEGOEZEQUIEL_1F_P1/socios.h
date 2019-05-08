@@ -53,7 +53,7 @@ void mostrarLibrosPrestados(Libro array[],Prestamos vec[], int cant);
 int inicializarSocios(Socio vec[], int tam);
 void altaSocio(Socio vec[],int cant);
 void modificarSocio(Socio vec[],int cant);
-void bajaSocio(Socio vec[],int cant);
+int bajaSocio(Socio vec[],int cant);
 int buscarLibre(Socio vec[], int tam);
 int generarCodigo(Socio vec[], int cant);
 int buscarSocio(Socio vec[], int cant, int codigoBuscar);

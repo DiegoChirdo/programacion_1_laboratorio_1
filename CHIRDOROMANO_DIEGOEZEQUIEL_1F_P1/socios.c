@@ -153,11 +153,15 @@ void modificarSocio(Socio vec[],int cant)
 
 }
 
-void bajaSocio(Socio vec[],int cant)
+int bajaSocio(Socio vec[],int cant)
 {
     int codigoBaja;
     int indexBuscar;
-
+    if(vec[0].isEmpty==0)
+    {
+        printf("TODAVIA NO SE HAN INGRESADO DATOS.\n");
+        return 0;
+    }
     printf("Ingrese codigo de socio para la baja: \n");
     scanf("%d", &codigoBaja);
     indexBuscar=buscarSocio(vec, cant, codigoBaja);
@@ -168,6 +172,7 @@ void bajaSocio(Socio vec[],int cant)
     }
     vec[indexBuscar].isEmpty=0;
     printf("Hecho!!!\n");
+    return 0;
 }
 
 int buscarLibre(Socio vec[], int tam)
@@ -554,7 +559,10 @@ void mostrarLibrosPrestados(Libro array[],Prestamos vec[], int cant)
     {
         if(vec[i].codigoLibro.codigo == resultadoBusqueda)
         {
-            printf("%d  -  %d ",vec[i].codigo,vec[i].codigoSocio.codigo);
+            printf("CODIGO PRESTAMO - CODIGO SOCIO\n");
+            printf("%d  -  %d",vec[i].codigo,vec[i].codigoSocio.codigo);
         }
     }
 }
+
+
