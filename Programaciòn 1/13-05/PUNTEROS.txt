@@ -1,5 +1,41 @@
 PUNTEROS:
 	tipodato* variable;
 	tipodato *variable;
+____________________________________________________________________________________________________________________________
 
+	int n, *p;
+	n = 7;
+	p = &n;
+	printf("%d",*p); /* ESTO VA A IMPRIMIR, 7. PORQUE P RETORNA LA DIRECCION DE MEMORIA DE N, PERO NO SU DIRECCION
+			    EN SI, SINO EL DATO QUE LLEVA. */
+__________________________________________________________________________________________________________________________________
 	
+	int n, *p, *q;
+	n = 7;
+	p = &n;
+	q = &p;
+	printf("%d",*q);
+
+______________________________________
+
+int *ptroA, *ptroB, dato;
+if (ptrA>ptroB)
+if(ptroA<0x1ABC)
+if(ptroB == &dato)
+if(ptroB != NULL)
+
+_________________________________________________
+
+int n[3] = {1, 2, 3};
+int *ptr, i;
+ptr = n;
+	/* p = n;
+	( p =8n[0] )  */
+for (i=0;i<3;i++)
+{
+	printf("%d",n[i]);
+}
+for (i=0;i<3;i++)
+{
+printf("%d", *(ptr+i)); /*  (mostrará 1) == ptr + i * (sizeof(int)) */
+}
