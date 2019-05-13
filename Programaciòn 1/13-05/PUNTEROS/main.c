@@ -14,7 +14,7 @@ int main()
     }
     for (i=0;i<3;i++)
    {
-    printf("%d\n", *(ptr+i)); /*  (mostrará 1 porque ptr + i(0) igual primera posicion) == ptr + i * (sizeof(int)) */
+        printf("%d\n", *(ptr+i)); /*  (mostrará 1 porque ptr + i(0) igual primera posicion) == ptr + i * (sizeof(int)) */
     }
 
     return 0;
