@@ -40,3 +40,7 @@ for (i=0;i<3;i++)
 printf("%d", *(ptr+i)); /*  (mostrará 1) == ptr + i * (sizeof(int)) */
 }
 
+_________
+int datoentero
+int * dir mem -> dato entero
+int ** dir mem -> dir mem -> datoentero
