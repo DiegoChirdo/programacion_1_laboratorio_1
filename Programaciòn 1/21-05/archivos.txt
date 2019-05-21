@@ -1,0 +1,5 @@
+ARCHIVOS -> Binarios (código máquina/binario) estructurados
+_________-> Texto (texto plano)
+SIEMPRE SE GUARDARÁ DE MANERA BINARIA.
+
+
