@@ -1,0 +1,8 @@
+Id  Nombre  Apellido  Sueldo
+
+1234 Juan Perez 21000.00
+2323 Ana Gomez 23000.00
+3113 Alberto Suarez 34000.00
+4545 Luis Majul 50000.00
+
+
