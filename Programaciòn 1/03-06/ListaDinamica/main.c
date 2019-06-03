@@ -50,10 +50,10 @@ char preguntarNombre()
     return nombre;
 }
 
-int preguntarEdad()
+void preguntarEdad(Persona* this, int age)
 {
-    int edad;
-    printf("Ingrese una edad: \n");
-    scanf("%d", &edad);
-    return edad;
+    if(age > 0)
+    {
+        this->age = age;
+    }
 }
