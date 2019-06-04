@@ -1,0 +1,7 @@
+int retorno;
+if 
+retorno = 0;
+else
+retorno = 1;
+
+return retorno;
