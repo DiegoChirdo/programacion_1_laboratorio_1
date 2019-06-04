@@ -1,2 +1,6 @@
 CREACION DE UNA LISTA DINAMICA
 
+getInt
+setEdad
+getEdad
+getNombre
