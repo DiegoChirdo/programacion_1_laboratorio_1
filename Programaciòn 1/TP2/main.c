@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
-
+#define CANTIDAD 20
 
 int main()
 {
+    EPersona persona[CANTIDAD];
     char seguir='s';
     int opcion=0;
+
+    inicializarPersona(persona, CANTIDAD);
 
     while(seguir=='s')
     {
@@ -21,8 +24,7 @@ int main()
         switch(opcion)
         {
             case 1:
-                printf("Ingrese un nombre: \n");
-
+                agregarPersona(persona, CANTIDAD);
                 break;
             case 2:
                 break;
