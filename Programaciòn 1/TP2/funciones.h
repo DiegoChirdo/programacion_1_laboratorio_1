@@ -10,6 +10,12 @@ typedef struct {
 
 }EPersona;
 
+void inicializarPersona(EPersona vec[], int tam);
+int buscarLibre(EPersona vec[], int tam);
+int agregarPersona(EPersona vec[], int cant);
+int borrarPersona(EPersona vec[], int cant);
+
+
 /**
  * Obtiene el primer indice libre del array.
  * @param lista el array se pasa como parametro.

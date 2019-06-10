@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
+#include "input.h"
 #define CANTIDAD 20
 
 int main()
@@ -27,10 +28,13 @@ int main()
                 agregarPersona(persona, CANTIDAD);
                 break;
             case 2:
+                borrarPersona(persona, CANTIDAD);
                 break;
             case 3:
+                printf("hey");
                 break;
             case 4:
+                printf("hey");
                 break;
             case 5:
                 seguir = 'n';

@@ -5,7 +5,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <conio.h>
-#include "socios.h"
+#include "funciones.h"
 #include "input.h"
 char getChar (char mensaje[]);
 int getStringLetras(char mensaje[],char input[]);
