@@ -29,6 +29,7 @@ int buscarLibre(EPersona vec[], int tam)
 int agregarPersona(EPersona vec[], int cant)
 {
     int libre;
+    int i;
     char auxiliarEdad[50];
     char auxiliarDni[50];
     if(buscarLibre(vec, cant)==-1)
@@ -53,6 +54,15 @@ int agregarPersona(EPersona vec[], int cant)
     {
         printf("El DNI solo puede estar compuesto por numeros. \n");
         return 0;
+    }
+    for(i=0;i<cant;i++)
+    {
+        if(atoi(auxiliarDni)==vec[i].dni)
+        {
+            system("cls");
+            printf("\nEl documento ya existe. \n\n");
+            return 0;
+        }
     }
     vec[libre].edad=atoi(auxiliarEdad);
     vec[libre].dni=atoi(auxiliarDni);
@@ -90,17 +100,52 @@ int borrarPersona(EPersona vec[], int cant)
 }
 
 
-void listarNombre(EPersona vec[], int cant)
+int listarNombre(EPersona vec[], int cant)
+{
+
+    system("cls");
+    EPersona aux;
+    int i,j;
+    if(vec[0].estado==0)
+    {
+        printf("\nAun no se han ingresado datos. \n");
+        return 0;
+    }
+    printf("LISTAR POR NOMBRE.\n");
+    printf("NOMBRE\t-\tEDAD\t-\tDNI\t\n");
+    for(i=0;i<cant-1;i++)
+    {
+        for(j=i+1;j<cant;j++)
+        {
+            if(vec[i].nombre<vec[j].nombre)
+            {
+                aux=vec[i];
+                vec[i]=vec[j];
+                vec[j]=aux;
+            }
+        }
+    }
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].estado==-1)
+        {
+        printf("%s\t-\t%d\t-\t%d\t\n", vec[i].nombre, vec[i].edad, vec[i].dni);
+        }
+    }
+    return 0;
+}
+
+void listarEdad(EPersona vec[], int cant)
 {
     system("cls");
-    printf("LISTAR POR NOMBRE.\n");
+    printf("LISTAR EDADES: \n");
     int i;
     for(i=0;i<cant;i++)
     {
         if(vec[i].estado==-1)
         {
-            printf("NOMBRE  -  EDAD  -  DNI\n\n");
-            printf("%s  -  %d  -  %d\n",vec[i].nombre,vec[i].edad,vec[i].dni);
+            printf("<18   -   19-35   -   >35\n");
+
         }
     }
 }

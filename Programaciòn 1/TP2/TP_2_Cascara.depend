@@ -36,9 +36,15 @@
 	"funciones.h"
 	"input.h"
 
-1560290710 c:\users\alumno\desktop\asd\programacion_1_laboratorio_1\programaciòn 1\tp2\funciones.h
+1560294287 c:\users\alumno\desktop\asd\programacion_1_laboratorio_1\programaciòn 1\tp2\funciones.h
 
-1560290710 source:c:\users\alumno\desktop\asd\programacion_1_laboratorio_1\programaciòn 1\tp2\main.c
+1560292803 source:c:\users\alumno\desktop\asd\programacion_1_laboratorio_1\programaciòn 1\tp2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"input.h"
+
+1560294279 source:c:\users\alumno\desktop\asd\programacion_1_laboratorio_1\programaciòn 1\tp2\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"

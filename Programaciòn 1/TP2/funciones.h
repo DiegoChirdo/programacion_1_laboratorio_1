@@ -10,7 +10,8 @@ typedef struct {
 
 }EPersona;
 
-void listarNombre(EPersona vec[], int cant);
+void listarEdad(EPersona vec[], int cant);
+int listarNombre(EPersona vec[], int cant);
 void inicializarPersona(EPersona vec[], int tam);
 int buscarLibre(EPersona vec[], int tam);
 int agregarPersona(EPersona vec[], int cant);
