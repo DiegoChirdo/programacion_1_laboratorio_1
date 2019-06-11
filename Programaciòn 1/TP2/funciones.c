@@ -57,7 +57,7 @@ int agregarPersona(EPersona vec[], int cant)
     vec[libre].edad=atoi(auxiliarEdad);
     vec[libre].dni=atoi(auxiliarDni);
     vec[libre].estado=-1;
-    printf("HECHO!!!\n");
+    printf("\n\nHECHO!!!\n");
     return 0;
 }
 
@@ -90,3 +90,17 @@ int borrarPersona(EPersona vec[], int cant)
 }
 
 
+void listarNombre(EPersona vec[], int cant)
+{
+    system("cls");
+    printf("LISTAR POR NOMBRE.\n");
+    int i;
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].estado==-1)
+        {
+            printf("NOMBRE  -  EDAD  -  DNI\n\n");
+            printf("%s  -  %d  -  %d\n",vec[i].nombre,vec[i].edad,vec[i].dni);
+        }
+    }
+}

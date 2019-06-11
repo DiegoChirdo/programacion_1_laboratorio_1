@@ -14,7 +14,7 @@ int main()
 
     while(seguir=='s')
     {
-        printf("1- Agregar persona\n");
+        printf("\n\n1- Agregar persona\n");
         printf("2- Borrar persona\n");
         printf("3- Imprimir lista ordenada por  nombre\n");
         printf("4- Imprimir grafico de edades\n\n");
@@ -31,7 +31,7 @@ int main()
                 borrarPersona(persona, CANTIDAD);
                 break;
             case 3:
-                printf("hey");
+                listarNombre(persona, CANTIDAD);
                 break;
             case 4:
                 printf("hey");
