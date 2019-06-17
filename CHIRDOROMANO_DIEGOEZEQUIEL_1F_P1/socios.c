@@ -44,7 +44,7 @@ int inicializarSocios(Socio vec[], int tam)
     return result;
 }
 
-void altaSocio(Socio vec[],int cant)
+int altaSocio(Socio vec[],int cant)
 {
     int codigo;
     int libre;
@@ -53,6 +53,7 @@ void altaSocio(Socio vec[],int cant)
     {
         printf("\nNo hay lugares libres\n");
         system("pause");
+        return 0;
     }
     libre=buscarLibre(vec, cant);
     codigo=generarCodigo(vec, cant);
@@ -61,11 +62,13 @@ void altaSocio(Socio vec[],int cant)
     {
         printf("Solo letras.\n");
         system("pause");
+        return 0;
     }
     if(!getStringLetras("Ingrese un apellido: \n",vec[libre].apellido))
     {
         printf("Solo letras.\n");
         system("pause");
+        return 0;
     }
     printf("Ingrese un sexo (m/f):\n");
     fflush(stdin);
@@ -80,23 +83,35 @@ void altaSocio(Socio vec[],int cant)
     {
         printf("Ingrese correctamente.\n");
         system("pause");
+        return 0;
     }
     getString("Ingrese un email: \n", vec[libre].email);
     printf("Fecha de ingreso: \n");
     printf("Ingrese un dia: \n");
-    fflush(stdin);
     scanf("%d",&vec[libre].fechaSocio.dia);
+    while(vec[libre].fechaSocio.dia < 1 || vec[libre].fechaSocio.dia > 31)
+    {
+        printf("Ingrese un dia correctamente: \n");
+        scanf("%d",&vec[libre].fechaSocio.dia);
+    }
+    fflush(stdin);
     printf("Ingrese un mes: \n");
     fflush(stdin);
     scanf("%d",&vec[libre].fechaSocio.mes);
+    while(vec[libre].fechaSocio.mes < 1 || vec[libre].fechaSocio.mes > 12)
+    {
+        printf("Ingrese un mes correctamente: \n");
+        scanf("%d",&vec[libre].fechaSocio.mes);
+    }
     printf("Ingrese un anio: \n");
     fflush(stdin);
     scanf("%d",&vec[libre].fechaSocio.anio);
     vec[libre].isEmpty=1;
     printf("HECHO!!!\n");
+    return 0;
 }
 
-void modificarSocio(Socio vec[],int cant)
+int modificarSocio(Socio vec[],int cant)
 {
     int codigoModificar;
     int indexBuscar;
@@ -110,6 +125,7 @@ void modificarSocio(Socio vec[],int cant)
     {
         printf("No existe ese codigo.\n");
         system("pause");
+        return 0;
     }
 
     while(campoModificar!=6)
@@ -124,6 +140,8 @@ void modificarSocio(Socio vec[],int cant)
             if(!getStringLetras("Ingrese nuevo apellido: \n",vec[indexBuscar].apellido))
             {
                 printf("Solo letras.\n");
+                system("pause");
+                return 0;
                 break;
             }
             break;
@@ -131,6 +149,8 @@ void modificarSocio(Socio vec[],int cant)
             if(!getStringLetras("Ingrese nuevo nombre: \n",vec[indexBuscar].nombre))
             {
                 printf("Solo letras.\n");
+                system("pause");
+                return 0;
                 break;
             }
             break;
@@ -141,6 +161,8 @@ void modificarSocio(Socio vec[],int cant)
             if(!getStringTelefono("Ingrese nuevo telefono: \n",vec[indexBuscar].telefono))
             {
                 printf("Ingrese correctamente.\n");
+                system("pause");
+                return 0;
                 break;
             }
             break;
@@ -150,7 +172,7 @@ void modificarSocio(Socio vec[],int cant)
         }
 
     }
-
+    return 0;
 }
 
 int bajaSocio(Socio vec[],int cant)
@@ -160,6 +182,7 @@ int bajaSocio(Socio vec[],int cant)
     if(vec[0].isEmpty==0)
     {
         printf("TODAVIA NO SE HAN INGRESADO DATOS.\n");
+        system("pause");
         return 0;
     }
     printf("Ingrese codigo de socio para la baja: \n");
@@ -169,6 +192,7 @@ int bajaSocio(Socio vec[],int cant)
     {
         printf("No existe ese codigo.\n");
         system("pause");
+        return 0;
     }
     vec[indexBuscar].isEmpty=0;
     printf("Hecho!!!\n");
@@ -265,7 +289,7 @@ void listarAutores(Autor vec[],int cant)
     }
 }
 
-void altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
+int altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
 {
     int indexLibre;
     int busquedaLibro;
@@ -283,6 +307,7 @@ void altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
     {
         printf("NO SE ENCONTRO.\n");
         system("pause");
+        return 0;
     }
     printf("INGRESE UN CODIGO DE SOCIO: \n");
     scanf("%d",&codigoSocio);
@@ -291,14 +316,25 @@ void altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
     {
         printf("NO SE ENCONTRO. \n");
         system("pause");
+        return 0;
     }
     printf("Fecha de prestamo: \n");
     printf("Ingrese un dia: \n");
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.dia);
+    while(vec[indexLibre].fechaPrestamo.dia < 1 || vec[indexLibre].fechaPrestamo.dia > 31)
+    {
+        printf("Ingrese dia correctamente: \n");
+        scanf("%d",&vec[indexLibre].fechaPrestamo.dia);
+    }
     printf("Ingrese un mes: \n");
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.mes);
+    while(vec[indexLibre].fechaPrestamo.mes < 1 || vec[indexLibre].fechaPrestamo.mes > 12)
+    {
+        printf("Ingrese mes correctamente: \n");
+        scanf("%d", &vec[indexLibre].fechaPrestamo.mes);
+    }
     printf("Ingrese un anio: \n");
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.anio);
@@ -307,7 +343,7 @@ void altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
     vec[indexLibre].codigoSocio.codigo=busquedaSocio;
     vec[indexLibre].isEmpty=1;
     printf("HECHO!!!\n");
-
+    return 0;
 }
 
 void mostrarPrestamos(Prestamos vec[], int cant)
@@ -399,7 +435,7 @@ int buscarCodigoSocio(Socio vec[], int cant, int codigoBuscar)
     return indexSocio;
 }
 
-void altaAutor(Autor vec[],int cant)
+int altaAutor(Autor vec[],int cant)
 {
     int codigo;
     int libre;
@@ -408,6 +444,7 @@ void altaAutor(Autor vec[],int cant)
     {
         printf("NO HAY MAS LUGAR.\n");
         system("pause");
+        return 0;
     }
     codigo=generarCodigoAutor(vec,cant);
     vec[libre].codigo=codigo;
@@ -415,14 +452,17 @@ void altaAutor(Autor vec[],int cant)
     {
         printf("Solo letras.\n");
         system("pause");
+        return 0;
     }
     if(!getStringLetras("Ingrese apellido: \n",vec[libre].apellido))
     {
         printf("Solo letras.\n");
         system("pause");
+        return 0;
     }
     vec[libre].isEmpty=1;
     printf("HECHO!!!\n");
+    return 0;
 }
 
 int generarCodigoAutor(Autor vec[], int cant)
@@ -458,7 +498,7 @@ int buscarLibreAutor(Autor vec[], int tam)
     return indexLibre;
 }
 
-void bajaAutor(Autor vec[],int cant)
+int bajaAutor(Autor vec[],int cant)
 {
     int codigoBaja;
     int indexBuscar;
@@ -470,9 +510,11 @@ void bajaAutor(Autor vec[],int cant)
     {
         printf("No existe ese codigo.\n");
         system("pause");
+        return 0;
     }
     vec[indexBuscar].isEmpty=0;
     printf("Hecho!!!\n");
+    return 0;
 }
 
 int buscarAutor(Autor vec[], int cant, int codigoBuscar){
@@ -491,7 +533,7 @@ int buscarAutor(Autor vec[], int cant, int codigoBuscar){
     return indexAutor;
 }
 
-void modificarAutor(Autor vec[],int cant)
+int modificarAutor(Autor vec[],int cant)
 {
     int codigoModificar;
     int indexBuscar;
@@ -505,6 +547,7 @@ void modificarAutor(Autor vec[],int cant)
     {
         printf("No existe ese codigo.\n");
         system("pause");
+        return 0;
     }
 
     while(campoModificar!=3)
@@ -519,20 +562,22 @@ void modificarAutor(Autor vec[],int cant)
             if(!getStringLetras("Ingrese nuevo apellido: \n",vec[indexBuscar].apellido))
             {
                 printf("Solo letras.\n");
-                break;
+                system("pause");
+                return 0;
             }
             break;
         case 2:
             if(!getStringLetras("Ingrese nuevo nombre: \n",vec[indexBuscar].nombre))
             {
                 printf("Solo letras.\n");
-                break;
+                system("pause");
+                return 0;
             }
             break;
         }
 
     }
-
+    return 0;
 }
 
 int menuListado()
@@ -564,5 +609,6 @@ void mostrarLibrosPrestados(Libro array[],Prestamos vec[], int cant)
         }
     }
 }
+
 
 
