@@ -143,7 +143,7 @@ while(opcion!=9)
             case 9:
                 system("cls");
                 printf("LISTADO LIBROS ORDENADOS POR TITULO: \n");
-
+                librosPorTitulo(libritos, CANTIDAD);
                 break;
             case 10:
                 system("cls");

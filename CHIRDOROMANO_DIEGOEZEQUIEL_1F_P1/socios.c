@@ -811,3 +811,39 @@ int sociosFechaDeterminada(Prestamos vec[], Socio arr[], int cant)
     return 0;
 }
 
+void librosPorTitulo(Libro array[], int cant)
+{
+    int i, j;
+    char auxiliar[50];
+    int auxiliarLibro;
+    int auxiliarCodigo;
+    for(i=0;i<cant-1;i++)
+    {
+        for(j=i+1;j<cant;j++)
+        {
+            if(strcmp(array[i].titulo,array[j].titulo)==1)
+            {
+                strcpy(auxiliar,array[i].titulo);
+                auxiliarLibro=array[i].codigo;
+                auxiliarCodigo=array[i].codigoAutor.codigo;
+                array[i].isEmpty=1;
+                strcpy(array[i].titulo,array[j].titulo);
+                array[i].codigo=array[j].codigo;
+                array[i].codigoAutor.codigo=array[j].codigoAutor.codigo;
+                strcpy(array[j].titulo,auxiliar);
+                array[j].codigo=auxiliarLibro;
+                array[j].codigoAutor.codigo=auxiliarCodigo;
+                array[j].isEmpty=1;
+
+            }
+        }
+    }
+    printf("CODIGO  -  TITULO\n");
+    for(i=0;i<cant;i++)
+    {
+        if(array[i].codigo != 0)
+        {
+            printf("%d  -  %s\n",array[i].codigo,array[i].titulo);
+        }
+    }
+}
