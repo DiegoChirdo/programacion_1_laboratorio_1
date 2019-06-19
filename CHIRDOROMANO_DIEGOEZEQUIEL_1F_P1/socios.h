@@ -73,6 +73,10 @@ int bajaAutor(Autor vec[],int cant);
 int buscarAutor(Autor vec[], int cant, int codigoBuscar);
 int modificarAutor(Autor vec[],int cant);
 void mostrarPrestamos(Prestamos vec[], int cant);
-
+int totalGeneral(Prestamos vec[], int cant);
+int promedioDiario(Prestamos vec[], int cant);
+int noSuperaPromedioDiario(Prestamos vec[], int cant);
+int sociosPrestamoDeterminado(Libro array[], Prestamos vec[], int cant);
+int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant);
 
 #endif // SOCIOS_H_INCLUDED

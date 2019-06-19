@@ -339,7 +339,10 @@ int altaPrestamos(Prestamos vec[],Libro array[], Socio arr[], int cant)
     fflush(stdin);
     scanf("%d",&vec[indexLibre].fechaPrestamo.anio);
     vec[indexLibre].codigo=codigo;
+    strcpy(vec[indexLibre].codigoSocio.nombre,arr[buscarCodigoSocio(arr,cant,busquedaSocio)].nombre);
+    strcpy(vec[indexLibre].codigoSocio.apellido,arr[buscarCodigoSocio(arr,cant,busquedaSocio)].apellido);
     vec[indexLibre].codigoLibro.codigo=busquedaLibro;
+    strcpy(vec[indexLibre].codigoLibro.titulo,array[buscarCodigoSocio(arr,cant,busquedaSocio)].titulo);
     vec[indexLibre].codigoSocio.codigo=busquedaSocio;
     vec[indexLibre].isEmpty=1;
     printf("HECHO!!!\n");
@@ -583,7 +586,7 @@ int modificarAutor(Autor vec[],int cant)
 int menuListado()
 {
     int rta;
-    printf("1) LISTADO PRESTAMOS DE UN LIBRO\n2)LISTAR SOCIOS POR APELLIDO\n");
+    printf("1) TOTAL GENERAL Y PROMEDIO DIARIO DE PRESTAMOS\n ");
     scanf("%d",&rta);
     return rta;
 }
@@ -610,5 +613,120 @@ void mostrarLibrosPrestados(Libro array[],Prestamos vec[], int cant)
     }
 }
 
+int totalGeneral(Prestamos vec[], int cant)
+{
+    int i;
+    int acumulador = 0;
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].isEmpty==1)
+        {
+            acumulador=acumulador+1;
+        }
+    }
+    return acumulador;
+}
 
+int promedioDiario(Prestamos vec[], int cant)
+{
+    int i;
+    int acumulador = 0;
+    int promedio;
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].isEmpty==1)
+        {
+            acumulador=acumulador+1;
+        }
+    }
+    promedio=acumulador/7;
+    return promedio;
+}
 
+int noSuperaPromedioDiario(Prestamos vec[], int cant)
+{
+    int i;
+    int j;
+    int acumulador = 0;
+    int contador = 0;
+    int auxiliar = 0;
+    int promedio;
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].isEmpty==1)
+        {
+            acumulador=acumulador+1;
+        }
+    }
+    promedio=acumulador/7;
+    for(i=0;i<cant-1;i++)
+    {
+        for(j=i+1;j<cant;j++)
+        {
+            if(vec[i].isEmpty == 1 && vec[j].isEmpty == 1)
+            {
+                    if(vec[i].fechaPrestamo.dia && vec[i].fechaPrestamo.mes && vec[i].fechaPrestamo.anio == vec[j].fechaPrestamo.dia && vec[j].fechaPrestamo.mes && vec[j].fechaPrestamo.anio)
+                {
+                    contador++;
+                }
+            }
+        }
+    }
+    if(contador<promedio)
+    {
+        auxiliar++;
+    }
+    return auxiliar;
+}
+
+int sociosPrestamoDeterminado(Libro array[], Prestamos vec[], int cant)
+{
+    int codigo;
+    int i;
+    int resultadoBusqueda;
+    printf("INGRESE CODIGO DE LIBRO: \n");
+    scanf("%d",&codigo);
+    resultadoBusqueda=buscarCodigoLibro(array,cant,codigo);
+    if(resultadoBusqueda==-1)
+    {
+        printf("NO SE ENCONTRO.\n");
+        system("pause");
+        return 0;
+    }
+    system("cls");
+    printf("SOCIOS DEL LIBRO INGRESADO: \n");
+    printf("CODIGO  -  NOMBRE  - APELLIDO\n");
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].codigoLibro.codigo == codigo && vec[i].isEmpty == 1)
+        {
+            printf("%d  -  %s  -  %s\n",vec[i].codigoSocio.codigo, vec[i].codigoSocio.nombre, vec[i].codigoSocio.apellido);
+        }
+    }
+    return 0;
+}
+
+int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant)
+{
+    int codigo;
+    int indexBuscar;
+    int i;
+    printf("INGRESE UN CODIGO DE SOCIO: \n");
+    scanf("%d",&codigo);
+    indexBuscar=buscarSocio(arr, cant, codigo);
+    if(indexBuscar==-1)
+    {
+        printf("No existe ese codigo.\n");
+        system("pause");
+        return 0;
+    }
+    printf("LIBROS SOLICITADOS POR EL SOCIO: \n");
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].codigoSocio.codigo == codigo && vec[i].isEmpty == 1)
+        {
+            printf("%d  -  %s\n", vec[i].codigoLibro.codigo, vec[i].codigoLibro.titulo);
+        }
+    }
+    return 0;
+}

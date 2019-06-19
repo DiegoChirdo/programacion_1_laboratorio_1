@@ -93,13 +93,36 @@ while(opcion!=8)
         break;
     case 8:
         printf("LISTADO ESPECIAL:\n\n");
-        while(opcionListado!=3)
+        while(opcionListado!=10)
         {
             opcionListado=menuListado();
             switch(opcionListado)
             {
             case 1:
-                mostrarLibrosPrestados(libritos,arrayPrestamos,CANTIDAD);
+                /* mostrarLibrosPrestados(libritos,arrayPrestamos,CANTIDAD); */
+                system("cls");
+                printf("TOTAL GENERAL Y PROMEDIO DIARIO DE PRESTAMOS: \n");
+                printf("TOTAL GENERAL: %d\n", totalGeneral(arrayPrestamos, CANTIDAD));
+                printf("PROMEDIO DIARIO: %d\n\n\n", promedioDiario(arrayPrestamos, CANTIDAD));
+                break;
+            case 2:
+                system("cls");
+                printf("CANTIDAD DE DIAS QUE NO SUPERAN EL PROMEDIO DE PRESTAMOS DIARIOS: %d\n\n\n",noSuperaPromedioDiario(arrayPrestamos,CANTIDAD));
+                break;
+            case 3:
+                system("cls");
+                printf("SOCIOS DE UN LIBRO DETERMINADO: \n");
+                sociosPrestamoDeterminado(libritos,arrayPrestamos,CANTIDAD);
+                break;
+            case 4:
+                system("cls");
+                printf("LIBROS DE X SOCIO: \n");
+                libroPrestamoDeterminado(arraySocios, arrayPrestamos, CANTIDAD);
+                break;
+            case 5:
+                system("cls");
+                printf("LIBRO MENOS SOLICITADO: \n");
+
                 break;
             }
 

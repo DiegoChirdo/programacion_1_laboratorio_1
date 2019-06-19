@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1560803037 source:c:\users\diego\desktop\programming\programacion_1_laboratorio_1\chirdoromano_diegoezequiel_1f_p1\input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"input.h"
+
+1560803037 c:\users\diego\desktop\programming\programacion_1_laboratorio_1\chirdoromano_diegoezequiel_1f_p1\input.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"socios.h"
+	"input.h"
+
+1560805737 c:\users\diego\desktop\programming\programacion_1_laboratorio_1\chirdoromano_diegoezequiel_1f_p1\socios.h
+
