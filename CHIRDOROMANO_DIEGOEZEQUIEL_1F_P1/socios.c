@@ -586,7 +586,7 @@ int modificarAutor(Autor vec[],int cant)
 int menuListado()
 {
     int rta;
-    printf("1) TOTAL GENERAL Y PROMEDIO DIARIO DE PRESTAMOS\n ");
+    printf("\n\n1) TOTAL GENERAL Y PROMEDIO DIARIO DE PRESTAMOS\n2) CANTIDAD DE DIAS QUE NO SUPERAN EL PROMEDIO DE PRESTAMOS DIARIOS\n3) SOCIOS DE UN LIBRO DETERMINADO\n4) LIBROS DE X SOCIO\n5) LIBRO MENOS SOLICITADO\n6) SOCIO QUE REALIZO MAS PRESTAMOS\n7) LIBROS SOLICITADOS EN UNA FECHA DETERMINADA\n8) SOCIOS QUE REALIZARON PRESTAMO EN DETERMINADA FECHA\n9) LISTADO LIBROS ORDENADOS POR TITULO\n10) SOCIOS ORDENADOS POR APELLIDO\n11) SALIR\n\n");
     scanf("%d",&rta);
     return rta;
 }
@@ -730,3 +730,84 @@ int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant)
     }
     return 0;
 }
+
+/* int libroMenosSolicitado(Prestamos vec[], int cant)
+{
+    int i, j;
+    for(i=0;i<cant-1;i++)
+    {
+        for(j=i+1;j<cant;j++)
+        {
+            if(vec[i].codigoLibro.codigo == vec[j].codigoLibro.codigo && vec[j].isEmpty == 1)
+        }
+    }
+
+    return 0;
+} */
+
+int prestamoFechaDeterminada(Prestamos vec[], int cant)
+{
+    int dia;
+    int mes;
+    int anio;
+    int i;
+
+    printf("INGRESE UN DIA: \n");
+    scanf("%d", &dia);
+    while(dia<1 || dia>31)
+    {
+        printf("INGRESE CORRECTAMENTE: \n");
+        scanf("%d",&dia);
+    }
+    printf("INGRESE UN MES: \n");
+    scanf("%d", &mes);
+    while(mes<1 || mes>12)
+    {
+        printf("INGRESE MES CORRECTAMENTE: \n");
+        scanf("%d",&mes);
+    }
+    printf("INGRESE UN ANIO: \n");
+    scanf("%d",&anio);
+    while(anio<1900 || anio > 2020)
+    {
+        printf("INGRESE ANIO CORRECTAMENTE: \n");
+        scanf("%d",&anio);
+    }
+    printf("PRESTAMOS DE FECHA SOLICITADA: \n");
+    printf("CODIGO SOCIO  -  CODIGO LIBRO  -  TITULO\n\n");
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].fechaPrestamo.dia == dia && vec[i].fechaPrestamo.mes == mes && vec[i].fechaPrestamo.anio == anio && vec[i].isEmpty == 1)
+        {
+            printf("%d  -  %d  -  %s\n",vec[i].codigoSocio.codigo, vec[i].codigoLibro.codigo, vec[i].codigoLibro.titulo);
+        }
+    }
+    return 0;
+}
+
+int sociosFechaDeterminada(Prestamos vec[], Socio arr[], int cant)
+{
+    int codigo;
+    int i;
+    int indexBuscar;
+    printf("INGRESE CODIGO DE SOCIO: \n");
+    scanf("%d",&codigo);
+    indexBuscar=buscarSocio(arr, cant, codigo);
+    if(indexBuscar==-1)
+    {
+        printf("No existe ese codigo de socio.\n");
+        system("pause");
+        return 0;
+    }
+    printf("PRESTAMOS SOLICITADOS POR EL SOCIO NUMERO %d\n", codigo);
+    printf("CODIGO LIBRO  -  TITULO\n");
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].codigoSocio.codigo == codigo && vec[i].isEmpty == 1)
+        {
+            printf("%d  -  %s\n",vec[i].codigoLibro.codigo, vec[i].codigoLibro.titulo);
+        }
+    }
+    return 0;
+}
+

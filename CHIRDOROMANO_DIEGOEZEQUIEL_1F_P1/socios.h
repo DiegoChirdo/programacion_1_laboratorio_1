@@ -78,5 +78,7 @@ int promedioDiario(Prestamos vec[], int cant);
 int noSuperaPromedioDiario(Prestamos vec[], int cant);
 int sociosPrestamoDeterminado(Libro array[], Prestamos vec[], int cant);
 int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant);
+int prestamoFechaDeterminada(Prestamos vec[], int cant);
+int sociosFechaDeterminada(Prestamos vec[], Socio arr[], int cant);
 
 #endif // SOCIOS_H_INCLUDED

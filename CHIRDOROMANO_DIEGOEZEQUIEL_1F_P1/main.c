@@ -35,7 +35,7 @@ int opcionListado;
 inicializarSocios(arraySocios,CANTIDAD);
 inicializarPrestamo(arrayPrestamos,CANTIDAD);
 
-while(opcion!=8)
+while(opcion!=9)
 {
     opcion=menuOpcion();
     switch(opcion)
@@ -92,8 +92,9 @@ while(opcion!=8)
         altaPrestamos(arrayPrestamos,libritos, arraySocios,CANTIDAD);
         break;
     case 8:
+        system("cls");
         printf("LISTADO ESPECIAL:\n\n");
-        while(opcionListado!=10)
+        while(opcionListado!=11)
         {
             opcionListado=menuListado();
             switch(opcionListado)
@@ -122,6 +123,31 @@ while(opcion!=8)
             case 5:
                 system("cls");
                 printf("LIBRO MENOS SOLICITADO: \n");
+
+                break;
+            case 6:
+                system("cls");
+                printf("SOCIO QUE REALIZO MAS PRESTAMOS: \n");
+
+                break;
+            case 7:
+                system("cls");
+                printf("LIBROS SOLICITADOS EN UNA FECHA DETERMINADA: \n");
+                prestamoFechaDeterminada(arrayPrestamos, CANTIDAD);
+                break;
+            case 8:
+                system("cls");
+                printf("SOCIOS QUE REALIZARON PRESTAMO EN DETERMINADA FECHA: \n");
+                sociosFechaDeterminada(arrayPrestamos, arraySocios, CANTIDAD);
+                break;
+            case 9:
+                system("cls");
+                printf("LISTADO LIBROS ORDENADOS POR TITULO: \n");
+
+                break;
+            case 10:
+                system("cls");
+                printf("SOCIOS ORDENADOS POR APELLIDO: \n");
 
                 break;
             }
