@@ -745,46 +745,6 @@ int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant)
     return 0;
 } */
 
-int prestamoFechaDeterminada(Prestamos vec[], int cant)
-{
-    int dia;
-    int mes;
-    int anio;
-    int i;
-
-    printf("INGRESE UN DIA: \n");
-    scanf("%d", &dia);
-    while(dia<1 || dia>31)
-    {
-        printf("INGRESE CORRECTAMENTE: \n");
-        scanf("%d",&dia);
-    }
-    printf("INGRESE UN MES: \n");
-    scanf("%d", &mes);
-    while(mes<1 || mes>12)
-    {
-        printf("INGRESE MES CORRECTAMENTE: \n");
-        scanf("%d",&mes);
-    }
-    printf("INGRESE UN ANIO: \n");
-    scanf("%d",&anio);
-    while(anio<1900 || anio > 2020)
-    {
-        printf("INGRESE ANIO CORRECTAMENTE: \n");
-        scanf("%d",&anio);
-    }
-    printf("PRESTAMOS DE FECHA SOLICITADA: \n");
-    printf("CODIGO SOCIO  -  CODIGO LIBRO  -  TITULO\n\n");
-    for(i=0;i<cant;i++)
-    {
-        if(vec[i].fechaPrestamo.dia == dia && vec[i].fechaPrestamo.mes == mes && vec[i].fechaPrestamo.anio == anio && vec[i].isEmpty == 1)
-        {
-            printf("%d  -  %d  -  %s\n",vec[i].codigoSocio.codigo, vec[i].codigoLibro.codigo, vec[i].codigoLibro.titulo);
-        }
-    }
-    return 0;
-}
-
 int sociosFechaDeterminada(Prestamos vec[], Socio arr[], int cant)
 {
     int codigo;
@@ -881,4 +841,44 @@ void sociosPorApellido(Socio arr[], int cant)
             printf("%d  -  %s\n", arr[i].codigo, arr[i].apellido);
         }
     }
+}
+
+int prestamoFechaDeterminada(Prestamos vec[], int cant)
+{
+    int dia;
+    int mes;
+    int anio;
+    int i;
+
+    printf("INGRESE UN DIA: \n");
+    scanf("%d", &dia);
+    while(dia<1 || dia>31)
+    {
+        printf("INGRESE CORRECTAMENTE: \n");
+        scanf("%d",&dia);
+    }
+    printf("INGRESE UN MES: \n");
+    scanf("%d", &mes);
+    while(mes<1 || mes>12)
+    {
+        printf("INGRESE MES CORRECTAMENTE: \n");
+        scanf("%d",&mes);
+    }
+    printf("INGRESE UN ANIO: \n");
+    scanf("%d",&anio);
+    while(anio<1900 || anio > 2020)
+    {
+        printf("INGRESE ANIO CORRECTAMENTE: \n");
+        scanf("%d",&anio);
+    }
+    printf("PRESTAMOS DE FECHA SOLICITADA: \n");
+    printf("CODIGO SOCIO  -  CODIGO LIBRO  -  TITULO\n\n");
+    for(i=0;i<cant;i++)
+    {
+        if(vec[i].fechaPrestamo.dia == dia && vec[i].fechaPrestamo.mes == mes && vec[i].fechaPrestamo.anio == anio && vec[i].isEmpty == 1)
+        {
+            printf("%d  -  %d  -  %s\n",vec[i].codigoSocio.codigo, vec[i].codigoLibro.codigo, vec[i].codigoLibro.titulo);
+        }
+    }
+    return 0;
 }
