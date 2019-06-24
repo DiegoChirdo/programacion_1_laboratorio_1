@@ -30,3 +30,12 @@ Datos:
 	anio
 	tipo
 - data.csv
+
+INCLUIR (prototipos hechos en casa):
+main.c
+linkedList.c
+linkedList.h
+input.c
+input.h
+dominio.c
+dominio.h
