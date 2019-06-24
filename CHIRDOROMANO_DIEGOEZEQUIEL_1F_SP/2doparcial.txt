@@ -1,0 +1,41 @@
+1) Realizar un programa que lea un archivo,
+ (cuyo nombre se pasa como parametro por linea de comandos),
+con los datos de los dominios del registro automotor,
+guardandolos en un linkedList de entidades eDominio.
+
+2) Setear el campo tipo de cada uno de los leidos, segun el sig. criterio:
+- A para automovil
+- M para moto
+Para hacer esto, se debera desarrollar la funcion map en la bibl. linkedList,
+la cual recibira la lista y una funcion.
+La funcion map ejecutara la funcion recibida como parametro por cada item de la lista, 
+y le pasara en cada llamada uno de los items.
+De esta manera, la funcion pasada como parametro podra setear el tipo
+con el item recibido.
+
+3) Desarrollar una funcion filter en la bibl. linkedList, la cual recibira
+la lista, una funcion y un tipo.
+La funcion filter ejecutara la funcion recibida como parametro por cada
+item de la lista, realizando una nueva lista de acuerdo al tipo recibido 
+como parametro.
+
+4) Generar los siguientes archivos de salida:
+-auto.csv: contendra los dominios cuyo tipo es A
+-moto.csv: contendra solamente los dominios cuyo tipo es M
+
+Datos:
+- eDominio
+	id
+	dominio
+	anio
+	tipo
+- data.csv
+
+INCLUIR (prototipos hechos en casa):
+main.c
+linkedList.c
+linkedList.h
+input.c
+input.h
+dominio.c
+dominio.h
