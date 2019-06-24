@@ -731,19 +731,6 @@ int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant)
     return 0;
 }
 
-/* int libroMenosSolicitado(Prestamos vec[], int cant)
-{
-    int i, j;
-    for(i=0;i<cant-1;i++)
-    {
-        for(j=i+1;j<cant;j++)
-        {
-            if(vec[i].codigoLibro.codigo == vec[j].codigoLibro.codigo && vec[j].isEmpty == 1)
-        }
-    }
-
-    return 0;
-} */
 
 int sociosFechaDeterminada(Prestamos vec[], Socio arr[], int cant)
 {
@@ -882,3 +869,4 @@ int prestamoFechaDeterminada(Prestamos vec[], int cant)
     }
     return 0;
 }
+

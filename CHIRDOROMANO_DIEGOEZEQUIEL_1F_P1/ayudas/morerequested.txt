@@ -1,0 +1,48 @@
+void informServiceMoreRequested(eWork works[], int lenW, eCar cars[], int lenC, eService services[], int lenS, eBrand brands[], int lenB, eColor colors[], int lenH){
+    int i,indexS,max;
+    int serviceRequest[lenS];
+
+    for(i=0; i<lenS; i++){
+        serviceRequest[i] = 0;
+    }
+
+    for(i=0;i<lenW;i++){
+        if(works[i].isEmpty == FALSE){
+            indexS = getServiceIndex(services,lenS,works[i].idService);
+            serviceRequest[indexS] = serviceRequest[indexS] +1;
+        }
+    }
+
+    for(i=0; i<lenS; i++){
+        if(i==0){
+            max = serviceRequest[i];
+            indexS = i;
+        } else if(max < serviceRequest[i]){
+            max = serviceRequest[i];
+            indexS = i;
+        }
+    }
+
+    printf("\n   Servicio/s requerido/s %d veces: \n\n",max);
+    printTableServiceHeader();
+    for(i=0; i<lenS; i++){
+        if(serviceRequest[i] == max){
+            printTableService(services[i]);
+            //printf("- serviceRequest: %d \n\n" ,serviceRequest[i]);
+        }
+    }
+
+}
+
+____
+
+int getServiceIndex(eService list[], int length, int id){
+    int i,index;
+    for(i=0; i<length; i++){
+        if(list[i].id == id){
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
