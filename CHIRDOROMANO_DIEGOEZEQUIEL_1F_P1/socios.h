@@ -81,5 +81,6 @@ int libroPrestamoDeterminado(Socio arr[], Prestamos vec[], int cant);
 int prestamoFechaDeterminada(Prestamos vec[], int cant);
 int sociosFechaDeterminada(Prestamos vec[], Socio arr[], int cant);
 void librosPorTitulo(Libro array[], int cant);
+void sociosPorApellido(Socio arr[], int cant);
 
 #endif // SOCIOS_H_INCLUDED

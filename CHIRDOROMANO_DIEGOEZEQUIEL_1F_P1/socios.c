@@ -268,7 +268,7 @@ void listarLibros(Libro vec[],int cant)
     int i;
     for(i=0;i<cant;i++)
     {
-        if(vec[i].isEmpty==1)
+        if(vec[i].isEmpty==1 && vec[i].codigo!=0)
         {
             printf("CODIGO  -  LIBRO  -  COD. AUTOR\n");
             printf("%d  -  %s   -  %d\n",vec[i].codigo,vec[i].titulo,vec[i].codigoAutor.codigo);
@@ -844,6 +844,41 @@ void librosPorTitulo(Libro array[], int cant)
         if(array[i].codigo != 0)
         {
             printf("%d  -  %s\n",array[i].codigo,array[i].titulo);
+        }
+    }
+}
+
+void sociosPorApellido(Socio arr[], int cant)
+{
+    int i, j;
+    int auxiliarCodigo;
+    char auxiliarNombre[50];
+    char auxiliarApellido[50];
+
+    for(i=0;i<cant-1;i++)
+    {
+        for(j=i+1;j<cant;j++)
+        {
+            if(strcmp(arr[i].apellido,arr[j].apellido)==1)
+            {
+                strcpy(auxiliarApellido,arr[i].apellido);
+                strcpy(auxiliarNombre,arr[i].nombre);
+                auxiliarCodigo=arr[i].codigo;
+                strcpy(arr[i].apellido,arr[j].apellido);
+                strcpy(arr[i].nombre,arr[j].nombre);
+                arr[i].codigo=arr[j].codigo;
+                strcpy(arr[j].apellido,auxiliarApellido);
+                strcpy(arr[j].nombre,auxiliarNombre);
+                arr[j].codigo=auxiliarCodigo;
+            }
+        }
+    }
+    printf("CODIGO  -  APELLIDO\n");
+    for(i=0;i<cant;i++)
+    {
+        if(arr[i].codigo!=0)
+        {
+            printf("%d  -  %s\n", arr[i].codigo, arr[i].apellido);
         }
     }
 }
