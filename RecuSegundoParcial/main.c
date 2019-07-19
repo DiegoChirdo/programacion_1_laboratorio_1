@@ -17,7 +17,7 @@ int main()
         switch(opcion)
         {
         case 1:
-            parser_EnvioFromText("data_final2.csv",envios);
+            controller_loadFromText("data_final2.csv", envios);
             break;
         case 2:
             if(ll_len(envios))
@@ -26,12 +26,10 @@ int main()
             }
             break;
         case 3:
+            ll_map(envios,laQueMapea);
+            controller_saveAsText("datos23.csv",envios);
             break;
-
         }
     }
-
-
-    printf("Hello world!\n");
     return 0;
 }

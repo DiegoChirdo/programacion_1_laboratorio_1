@@ -132,3 +132,109 @@ void imprimir(Envio* pElement)
         break;
     }
 }
+
+int envio_getId(Envio* this, int* id)
+{
+    int todoOk = 0;
+    if(this != NULL && id != NULL)
+    {
+        *id = this->id_envio;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int envio_getNombre(Envio* this, char* nombre)
+{
+    int todoOk = 0;
+    if (this != NULL && nombre != NULL)
+    {
+        strcpy(nombre, this->nombre_producto);
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int envio_getKmRecorridos(Envio* this, int* km)
+{
+    int todoOk = 0;
+    if(this != NULL && km != NULL)
+    {
+        *km = this->km_recorridos;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int envio_getTipoEntrega(Envio* this, int* tipoEntrega)
+{
+    int todoOk = 0;
+    if(this != NULL && tipoEntrega != NULL)
+    {
+        *tipoEntrega = this->tipo_entrega;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int laQueMapea(void* envios)
+{
+    int kmRecorridos;
+    int tipoEntrega;
+    envio_getKmRecorridos(envios,&kmRecorridos);
+    envio_getTipoEntrega(envios, &tipoEntrega);
+    if(kmRecorridos>0 && kmRecorridos <=50)
+    {
+        if(tipoEntrega == 1)
+        {
+            envio_setCosto(envios, 697);
+        }
+        else if(tipoEntrega == 2)
+        {
+            envio_setCosto(envios, 867);
+        }
+        else if(tipoEntrega == 3)
+        {
+            envio_setCosto(envios, 147);
+        }
+    }
+    else
+    {
+        if(tipoEntrega == 1)
+        {
+            envio_setCosto(envios, 410);
+        }
+        else if(tipoEntrega == 2)
+        {
+            envio_setCosto(envios, 640);
+        }
+        else if(tipoEntrega == 3)
+        {
+            envio_setCosto(envios, 160);
+        }
+    }
+    return 1;
+
+}
+
+int envio_setCosto(Envio* this, int costo)
+{
+    int todoOk = 0;
+    if(this != NULL && costo > 0)
+    {
+        this->costo = costo;
+        todoOk = 1;
+    }
+    return todoOk;
+}
+
+int envio_getCosto(Envio* this, int* costo)
+{
+    int todoOk = 0;
+    if(this != NULL && costo != NULL)
+    {
+        *costo = this->costo;
+        todoOk = 1;
+    }
+    return todoOk;
+}

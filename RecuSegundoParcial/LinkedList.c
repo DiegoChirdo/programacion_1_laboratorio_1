@@ -627,7 +627,7 @@ int ll_print(LinkedList* this,void (*pFunc)(void*))
     return retorno;
 }
 
-int ll_map(LinkedList* this,void (*pFunc)(void*))
+int ll_map(LinkedList* this,int (*pFunc)(void*))
 {
     int retorno = -1;
     int len;
