@@ -58,9 +58,11 @@ int main()
         case 9:
             controller_saveVentas("informe.txt",venta);
             break;
+        case 10:
+            ventaPorCliente(clientes,venta);
+            break;
         }
     }
-
     return 0;
 }
 

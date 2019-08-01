@@ -329,6 +329,50 @@ int buscarVentaPorCliente(int id, LinkedList* this)
     return index;
 }
 
+int buscarVentaPorCliente2(int id, LinkedList* this)
+{
+    Ventas* venta;
+    int i;
+    float acumulador;
+    int size;
+
+    if(this != NULL)
+    {
+        size = ll_len(this);
+        for(i=0;i<size;i++)
+        {
+            venta=(Ventas*)ll_get(this, i);
+            if(venta->idCliente==id)
+            {
+                acumulador = acumulador + venta->precioUnitario;
+            }
+        }
+    }
+    return acumulador;
+}
+
+int buscarVentaPorCliente3(int id, LinkedList* this)
+{
+    Ventas* venta;
+    int i;
+    int contador = 0;
+    int size;
+
+    if(this != NULL)
+    {
+        size = ll_len(this);
+        for(i=0;i<size;i++)
+        {
+            venta=(Ventas*)ll_get(this, i);
+            if(venta->idCliente==id)
+            {
+                contador++;
+            }
+        }
+    }
+    return contador;
+}
+
 int menuVentasPorProducto()
 {
     int id;

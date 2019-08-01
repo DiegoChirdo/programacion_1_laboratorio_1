@@ -669,3 +669,4 @@ LinkedList* ll_filter(LinkedList* this,int (*fn)(void*))
     }
     return newList;
 }
+

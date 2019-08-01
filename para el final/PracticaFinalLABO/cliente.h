@@ -24,5 +24,7 @@ int buscarCliente(int id, LinkedList* this);
 void mostrarCliente(Cliente* this);
 void mostrarClientes(LinkedList* this);
 int cliente_removeCliente(LinkedList* this);
+void ventaPorCliente(LinkedList* this, LinkedList* that);
+
 
 #endif // CLIENTE_H_INCLUDED

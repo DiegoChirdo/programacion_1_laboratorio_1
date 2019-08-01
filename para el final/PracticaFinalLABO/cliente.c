@@ -396,3 +396,29 @@ int cliente_removeCliente(LinkedList* this)
     }
     return 1;
 }
+
+void ventaPorCliente(LinkedList* this, LinkedList* that)
+{
+    Cliente* aux;
+    int sizeClientes = ll_len(this);
+    int i;
+    int contador = 0;
+    float acumulador = 0;
+    int auxId;
+    if(ll_isEmpty(this) || ll_isEmpty(that))
+    {
+        printf("Aun no se han ingresado clientes o ventas. \n");
+        system("pause");
+        exit(1);
+    }
+    for(i=0;i<sizeClientes;i++)
+    {
+        aux = (Cliente*)ll_get(this, i);
+        auxId = aux->id;
+        acumulador = buscarVentaPorCliente2(auxId, that);
+        contador = buscarVentaPorCliente3(auxId,that);
+        printf("IDCLIENTE:%d  -  CANTIDAD DE COMPRAS:%d  -  TOTAL:%f\n\n",aux->id,contador,acumulador);
+        contador = 0;
+        acumulador = 0;
+    }
+}
