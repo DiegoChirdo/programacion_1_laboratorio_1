@@ -1,0 +1,4 @@
+id,nombre,apellido,dni
+100,Juan,Perez,33263109
+101,Pedro,Sanches,36263109
+102,Mauricio,Puto,3999999

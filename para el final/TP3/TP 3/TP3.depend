@@ -1,0 +1,153 @@
+# depslib dependency file v1.0
+1560366959 source:c:\users\dani\downloads\tp3 (1)\tp3\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533133022 c:\users\dani\downloads\tp3 (1)\tp3\win_64\linkedlist.h
+
+1560366072 c:\users\dani\downloads\tp3 (1)\tp3\win_64\employee.h
+	"LinkedList.h"
+
+1560366543 source:c:\users\dani\downloads\tp3 (1)\tp3\win_64\employee.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Employee.h"
+	"LinkedList.h"
+
+1560366499 source:c:\users\dani\downloads\tp3 (1)\tp3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1533133022 c:\users\dani\downloads\tp3 (1)\tp3\win_64\controller.h
+
+1560366099 source:c:\users\dani\downloads\tp3 (1)\tp3\win_64\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560528240 source:c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Parser.h"
+	"String.h"
+	"Controller.h"
+
+1533133022 c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\linkedlist.h
+
+1560442021 c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\employee.h
+	"LinkedList.h"
+
+1560529129 source:c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\employee.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Employee.h"
+	"LinkedList.h"
+	"Controller.h"
+
+1560526401 source:c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1560438942 c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\controller.h
+
+1560529129 source:c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1533133022 c:\users\dani\desktop\tp lab 1\tp_laboratorio_1\tp 3\parser.h
+
+1560444993 source:c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Parser.h"
+	"String.h"
+
+1560444993 c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\linkedlist.h
+
+1560444993 c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\employee.h
+	"LinkedList.h"
+
+1560444993 c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\parser.h
+
+1560447835 source:c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\employee.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Employee.h"
+	"LinkedList.h"
+	"Controller.h"
+
+1560444993 c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\controller.h
+
+1560444993 source:c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1560452246 source:c:\users\alumno\downloads\tp_laboratorio_1-master (1)\tp_laboratorio_1-master\tp 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560548952 source:c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\controller.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"LinkedList.h"
+	"Employee.h"
+	"Parser.h"
+	"String.h"
+	"Controller.h"
+
+1560548952 c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\linkedlist.h
+
+1560548952 c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\employee.h
+	"LinkedList.h"
+
+1560548952 c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\parser.h
+
+1560548952 c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\controller.h
+
+1560548952 source:c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\employee.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"Employee.h"
+	"LinkedList.h"
+	"Controller.h"
+
+1560548952 source:c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+
+1560548952 source:c:\users\alumno\desktop\nueva carpeta\tp_laboratorio_1\tp 3\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
