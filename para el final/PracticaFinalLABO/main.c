@@ -45,13 +45,13 @@ int main()
             switch(opcion2 = menuVentasPorProducto())
             {
             case 1000:
-                ll_print(venta,codigo1000);
+                ll_filter(venta,codigo1000);
                 break;
             case 1001:
-                ll_print(venta,codigo1001);
+                ll_filter(venta,codigo1001);
                 break;
             case 1002:
-                ll_print(venta,codigo1002);
+                ll_filter(venta,codigo1002);
                 break;
             }
             break;

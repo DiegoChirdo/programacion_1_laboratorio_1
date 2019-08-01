@@ -610,20 +610,19 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 
 }
 
-int ll_print(LinkedList* this,int (*pFunc)(void*))
+int ll_print(LinkedList* this, int (*pFunc)(void*))
 {
     int retorno = -1;
     int len;
     int i;
-
     if(this != NULL && pFunc != NULL)
     {
         len = ll_len(this);
         for(i=0;i<len;i++)
         {
-            if(pFunc(ll_get(this,i)) == 1)
+            if(pFunc(ll_get(this,i)))
             {
-                mostrarVenta(this);
+                pFunc(ll_get(this,i));
             }
         }
         retorno = 0;
@@ -661,9 +660,10 @@ LinkedList* ll_filter(LinkedList* this,int (*fn)(void*))
         len = ll_len(this);
         for(i=0;i<len;i++)
         {
-           if(fn(ll_get(this,i)))
+           if(fn(ll_get(this,i))==1)
            {
                ll_add(newList,ll_get(this,i));
+               mostrarVentas(newList);
            }
         }
     }

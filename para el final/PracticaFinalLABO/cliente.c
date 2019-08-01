@@ -352,6 +352,7 @@ void mostrarClientes(LinkedList* this)
 int cliente_removeCliente(LinkedList* this)
 {
     int index;
+    int index2;
     char rta;
     int auxId;
 
@@ -369,6 +370,13 @@ int cliente_removeCliente(LinkedList* this)
     if(index == -1)
     {
         printf("No existe esa ID, se cancela la baja. \n");
+        system("pause");
+        return 0;
+    }
+    index2 = buscarVentaPorCliente(auxId,this);
+    if(index2 >= 0)
+    {
+        printf("No se puede borrar porque tiene una venta\n");
         system("pause");
         return 0;
     }

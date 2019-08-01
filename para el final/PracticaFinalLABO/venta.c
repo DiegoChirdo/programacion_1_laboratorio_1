@@ -306,12 +306,35 @@ int buscarVenta(int id, LinkedList* this)
     return index;
 }
 
+int buscarVentaPorCliente(int id, LinkedList* this)
+{
+    Ventas* venta;
+    int index = -1;
+    int i;
+    int size;
+
+    if(this != NULL)
+    {
+        size = ll_len(this);
+        for(i=0;i<size;i++)
+        {
+            venta=(Ventas*)ll_get(this, i);
+            if(venta->idCliente==id)
+            {
+                index=ll_indexOf(this, (void*)venta);
+                break;
+            }
+        }
+    }
+    return index;
+}
+
 int menuVentasPorProducto()
 {
     int id;
     printf("VENTAS POR PRODUCTO: \n");
     printf("\n1000 - TV_LG_32 - $8999.99\n1001 - PS4 - 12999.99\n1002 - IPHONE7 - 19480.99\n");
-    while(id < 1000 && id > 1002)
+    while(id < 1000 || id > 1002)
     {
         printf("\nINGRESE CODIGO DE PRODUCTO:\n");
         scanf("%d",&id);

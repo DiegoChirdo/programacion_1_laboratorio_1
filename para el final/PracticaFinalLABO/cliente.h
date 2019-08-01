@@ -25,5 +25,4 @@ void mostrarCliente(Cliente* this);
 void mostrarClientes(LinkedList* this);
 int cliente_removeCliente(LinkedList* this);
 
-
 #endif // CLIENTE_H_INCLUDED

@@ -34,6 +34,7 @@ int venta_getCantidad(Ventas* this,int* id);
 int venta_getPrecioUnitario(Ventas* this,float* id);
 int venta_getCodigo(Ventas* this,int* id);
 int controller_saveVentas(char* path , LinkedList* pArrayListEmployee);
+int buscarVentaPorCliente(int id, LinkedList* this);
 
 
 #endif // VENTA_H_INCLUDED
