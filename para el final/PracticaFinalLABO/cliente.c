@@ -21,6 +21,8 @@ int menuPrincipal()
     printf("8) Informar ventas por producto\n");
     printf("9) Generar informe de ventas\n");
     printf("10) Informar cantidad de ventas por cliente\n");
+    printf("11) Salir\n\n\n");
+    printf("Ingrese su opcion: \n");
     fflush(stdin);
     scanf("%d", &opcion);
     return opcion;
@@ -51,13 +53,14 @@ int controller_loadFromText(char* path , LinkedList* pArrayListEmployee)
     }
     if(todoOk==0)
     {
-        printf("\nNo pudieron cargarse los datos desde el archivo\n");
+        printf("\nNo pudieron cargarse los datos de CLIENTE desde el archivo\n");
         system("pause");
     }
     else
     {
-        printf("\nLos datos fueron cargados correctamente\n");
+        printf("\nLos datos de CLIENTE fueron cargados correctamente\n\n");
         system("pause");
+        system("cls");
     }
     return todoOk;
 }

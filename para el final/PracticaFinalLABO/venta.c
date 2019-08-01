@@ -32,13 +32,14 @@ int controller_ventasFromText(char* path , LinkedList* pArrayListEmployee)
     }
     if(todoOk==0)
     {
-        printf("\nNo pudieron cargarse los datos desde el archivo\n");
+        printf("\nNo pudieron cargarse los datos de VENTA desde el archivo\n");
         system("pause");
     }
     else
     {
-        printf("\nLos datos fueron cargados correctamente\n");
+        printf("\nLos datos de VENTA fueron cargados correctamente\n\n");
         system("pause");
+        system("cls");
     }
     return todoOk;
 }
