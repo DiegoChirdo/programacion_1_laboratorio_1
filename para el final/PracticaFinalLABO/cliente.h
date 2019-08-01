@@ -25,6 +25,10 @@ void mostrarCliente(Cliente* this);
 void mostrarClientes(LinkedList* this);
 int cliente_removeCliente(LinkedList* this);
 void ventaPorCliente(LinkedList* this, LinkedList* that);
-
+int controller_saveClientes(char* path , LinkedList* pArrayListEmployee);
+int cliente_getNombre(Cliente* this,char* nombre);
+int cliente_getApellido(Cliente* this,char* apellido);
+int cliente_getId(Cliente* this,int* id);
+int cliente_getDni(Cliente* this,float* dni);
 
 #endif // CLIENTE_H_INCLUDED

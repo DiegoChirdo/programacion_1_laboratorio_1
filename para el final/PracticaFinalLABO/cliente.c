@@ -95,6 +95,105 @@ int parser_ClienteFromText(FILE* pFile , LinkedList* pArrayListEmployee)
     return todoOk;
 }
 
+int controller_saveClientes(char* path , LinkedList* pArrayListEmployee)
+{
+    FILE* file;
+    Cliente* clientes;
+    int size, todoOk=0, i;
+    int id;
+    float dni;
+    char nombre[32];
+    char apellido[32];
+    if(ll_isEmpty(pArrayListEmployee))
+    {
+        printf("\nAun no se han ingresado datos.\n");
+    }
+    else
+    {
+        if(path != NULL && pArrayListEmployee != NULL)
+        {
+            size = ll_len(pArrayListEmployee);
+            file=fopen(path,"w");
+            if(file!=NULL)
+            {
+                for(i=0;i<size;i++)
+                {
+                    clientes=(Cliente*)ll_get(pArrayListEmployee,i);
+                    cliente_getNombre(clientes,nombre);
+                    cliente_getApellido(clientes,apellido);
+                    cliente_getId(clientes,&id);
+                    cliente_getDni(clientes,&dni);
+                    fprintf(file,"%d,%s,%s,%f\n",id,nombre,apellido,dni);
+                }
+                fclose(file);
+                if(i==size)
+                {
+                    todoOk=1;
+                }
+                else
+                {
+                    todoOk=0;
+                }
+            }
+        }
+    }
+    if(todoOk==1)
+    {
+        printf("\nLos datos se han guardado correctamente.\n");
+    }
+    else
+    {
+        printf("\nNo se han guardado correctamente.\n");
+    }
+
+    return todoOk;
+}
+
+int cliente_getNombre(Cliente* this,char* nombre)
+{
+    int todoOK=0;
+    if(this!=NULL && nombre!=NULL)
+    {
+        strcpy(nombre, this->nombre);
+        todoOK=1;
+    }
+    return todoOK;
+}
+
+int cliente_getApellido(Cliente* this,char* apellido)
+{
+    int todoOK=0;
+    if(this!=NULL && apellido!=NULL)
+    {
+        strcpy(apellido, this->apellido);
+        todoOK=1;
+    }
+    return todoOK;
+}
+
+int cliente_getId(Cliente* this,int* id)
+{
+    int todoOK=0;
+    if(this!=NULL && id!=NULL)
+    {
+        *id=this->id;
+        todoOK=1;
+    }
+    return todoOK;
+}
+
+int cliente_getDni(Cliente* this,float* dni)
+{
+    int todoOK=0;
+    if(this!=NULL && dni!=NULL)
+    {
+        *dni=this->dni;
+        todoOK=1;
+    }
+    return todoOK;
+}
+
+
 Cliente* cliente_newParametros(char* idStr, char* nameStr, char* apellidoStr, char* dni)
 {
     Cliente* clientes = cliente_new();

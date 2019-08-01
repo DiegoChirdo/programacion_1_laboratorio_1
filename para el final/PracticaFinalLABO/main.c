@@ -22,21 +22,26 @@ int main()
         {
         case 1:
             cliente_addCliente(clientes);
+            controller_saveClientes("clientes.txt",clientes);
             break;
         case 2:
             cliente_editCliente(clientes);
+            controller_saveClientes("clientes.txt",clientes);
             break;
         case 3:
             cliente_removeCliente(clientes);
+            controller_saveClientes("clientes.txt",clientes);
             break;
         case 4:
             mostrarClientes(clientes);
             break;
         case 5:
             venta_addVenta(venta, clientes);
+            controller_saveVentas("informe.txt",venta);
             break;
         case 6:
             remove_Venta(venta);
+            controller_saveVentas("informe.txt",venta);
             break;
         case 7:
             mostrarVentas(venta);
