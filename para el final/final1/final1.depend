@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1565293650 source:c:\users\diego\desktop\cufa\final1\input.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"input.h"
+	"partidas.h"
+
+1564638495 c:\users\diego\desktop\cufa\final1\linkedlist.h
+
+1564640058 c:\users\diego\desktop\cufa\final1\input.h
+
+1565298924 c:\users\diego\desktop\cufa\final1\partidas.h
+
+1565298990 source:c:\users\diego\desktop\cufa\final1\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"input.h"
+	"partidas.h"
+
+1565299017 source:c:\users\diego\desktop\cufa\final1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"input.h"
+	"LinkedList.h"
+	"partidas.h"
+
+1565299741 source:c:\users\diego\desktop\cufa\final1\partidas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"input.h"
+	"partidas.h"
+
