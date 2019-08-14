@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1565816898 source:c:\users\diego\desktop\viernes\empleados.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"LinkedList.h"
+	"empleados.h"
+
+1565816923 c:\users\diego\desktop\viernes\linkedlist.h
+
+1565816931 c:\users\diego\desktop\viernes\empleados.h
+
+1565816953 source:c:\users\diego\desktop\viernes\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"LinkedList.h"
+	"empleados.h"
+
