@@ -39,6 +39,8 @@ int venta_getCosto(Ventas* this, int* costo);
 void imprimir(Ventas* pElement);
 void print_ventas(LinkedList* list);
 int laQueMapea(void* ventas);
+void informe1(LinkedList* this, int auxSala);
+int buscarVentasPorSala(int sala, LinkedList* this);
 
 
 #endif // VENTAS_H_INCLUDED

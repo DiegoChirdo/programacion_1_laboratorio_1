@@ -288,3 +288,42 @@ int laQueMapea(void* ventas)
     }
     return 1;
 }
+
+void informe1(LinkedList* this, int auxSala)
+{
+    Ventas* aux;
+    int sizeVentas = ll_len(this);
+    int i;
+    int acumulador;
+    for(i=0;i<sizeVentas;i++)
+    {
+        aux = (Ventas*)ll_get(this,i);
+        if(aux->sala == auxSala)
+        {
+        acumulador = buscarVentasPorSala(auxSala, this);
+        }
+    }
+    printf("\nVENTAS DE LA SALA %d ES %d ENTRADAS\n", auxSala,acumulador);
+}
+
+int buscarVentasPorSala(int sala, LinkedList* this)
+{
+    Ventas* venta;
+    int i;
+    float acumulador = 0;
+    int size;
+
+    if(this != NULL)
+    {
+        size = ll_len(this);
+        for(i=0;i<size;i++)
+        {
+            venta=(Ventas*)ll_get(this, i);
+            if(venta->sala==sala)
+            {
+                acumulador = acumulador + venta->cantidad;
+            }
+        }
+    }
+    return acumulador;
+}

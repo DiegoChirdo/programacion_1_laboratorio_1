@@ -35,6 +35,12 @@ int main()
             controller_saveVentas("montos.csv",ventas);
             break;
         case 4:
+            system("cls");
+            printf("\n------INFORMES------\n");
+            int auxSala;
+            printf("Ingrese sala: ");
+            scanf("%d",&auxSala);
+            informe1(ventas,auxSala);
             break;
         }
     }
