@@ -36,6 +36,7 @@ int main()
             break;
         case 4:
             system("cls");
+            ll_map(ventas,laQueMapea);
             printf("\n------INFORMES------\n");
             int auxSala;
             printf("Ingrese sala: ");

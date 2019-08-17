@@ -295,15 +295,21 @@ void informe1(LinkedList* this, int auxSala)
     int sizeVentas = ll_len(this);
     int i;
     int acumulador;
+    float acumulador2;
     for(i=0;i<sizeVentas;i++)
     {
         aux = (Ventas*)ll_get(this,i);
         if(aux->sala == auxSala)
         {
         acumulador = buscarVentasPorSala(auxSala, this);
+        acumulador2 = buscarVentasPorSala2(auxSala,this);
         }
     }
     printf("\nVENTAS DE LA SALA %d ES %d ENTRADAS\n", auxSala,acumulador);
+    printf("VENTAS DE LA SALA %d ES TOTAL DE %f\n\n",auxSala,acumulador2);
+    printf("---------------------");
+    system("pause");
+    system("cls");
 }
 
 int buscarVentasPorSala(int sala, LinkedList* this)
@@ -322,6 +328,28 @@ int buscarVentasPorSala(int sala, LinkedList* this)
             if(venta->sala==sala)
             {
                 acumulador = acumulador + venta->cantidad;
+            }
+        }
+    }
+    return acumulador;
+}
+
+int buscarVentasPorSala2(int sala, LinkedList* this)
+{
+    Ventas* venta;
+    int i;
+    float acumulador = 0;
+    int size;
+
+    if(this != NULL)
+    {
+        size = ll_len(this);
+        for(i=0;i<size;i++)
+        {
+            venta=(Ventas*)ll_get(this, i);
+            if(venta->sala==sala)
+            {
+                acumulador = acumulador + venta->costo;
             }
         }
     }

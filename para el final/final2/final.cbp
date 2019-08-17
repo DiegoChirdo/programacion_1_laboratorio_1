@@ -31,9 +31,21 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="LinkedList.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="LinkedList.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="parser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="parser.h" />
+		<Unit filename="ventas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ventas.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

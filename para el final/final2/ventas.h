@@ -41,6 +41,7 @@ void print_ventas(LinkedList* list);
 int laQueMapea(void* ventas);
 void informe1(LinkedList* this, int auxSala);
 int buscarVentasPorSala(int sala, LinkedList* this);
+int buscarVentasPorSala2(int sala, LinkedList* this);
 
 
 #endif // VENTAS_H_INCLUDED
